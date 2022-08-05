@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1659707095658">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/friends">
+                            👩🏼‍❤️‍👨🏾友链
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1659707095658" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1659707095658" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/friends">
+                            👩🏼‍❤️‍👨🏾友链
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <ul class="posts-list">
+                    <li class="lite-item">
+                        <article class="post post-type">
+                            <div class="post-main post-type-main">
+                                <div class="post-content">
+                                    <div class="post-content-real">
+                                        
+                                            
+                                                <h3>
+                                                    2022
+                                                </h3>
+                                                
+                                                    
+
+                                                        <article class="archive-item">
+                                                            <a class="archive-item-link" href="https://xuaii.github.io/post/you-xi-ji-zhi-li-shi-jie/">
+                                                                游戏机制-里世界
+                                                            </a>
+                                                            <span class="archive-item-date">2022-08-02 </span>
+                                                        </article>
+                                                        
+                                                            
+                                                    
+
+                                                        <article class="archive-item">
+                                                            <a class="archive-item-link" href="https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/">
+                                                                游戏机制-窗体互动
+                                                            </a>
+                                                            <span class="archive-item-date">2022-08-02 </span>
+                                                        </article>
+                                                        
+                                                            
+                                                                
+                                    </div>
+                                    <div class="pagination-container">
+                                        
+                                                                
+                                                                        
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-footer">
+                                
+                                        
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计划',
+                                        url: 'https://xuaii.github.io/tag/DLSgPoOEP/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '马里奥-Ground',
+                                        url: 'http://music.163.com/song/media/outer/url?id=31719143.mp3',
+                                        artist: '',
+                                        cover: 'http://p2.music.126.net/CSH0Y-N4RWqCNmJBt3yT-Q==/19211766672383482.jpg?param=50y50',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://github.com" target="_blank">
+                                Github.com
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+
+</html>
