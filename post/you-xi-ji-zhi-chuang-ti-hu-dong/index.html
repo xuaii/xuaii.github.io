@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1659664962427">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/friends">
+                            👩🏼‍❤️‍👨🏾友链
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1659664962427" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1659664962427" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/friends">
+                            👩🏼‍❤️‍👨🏾友链
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                <div class="thumbnail-link" style="background-image: url('https://i2.hdslb.com/bfs/archive/b5eb689c0d0fbbb1e3f14f09b59d4dd7281af807.jpg@640w_400h_1c_!web-space-index-myvideo.webp')"></div>
+                                
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                游戏机制-窗体互动
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://xuaii.github.io/tag/RXsLi4wHZ/'">游戏机制</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                        <span class="post-meta-item-text"><i class="Card Card-view"></i>&nbsp;阅读量&nbsp;</span>
+                                                        <span data-hk-page="current"> - </span>
+                                                        
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            9.6分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Island and Winds" src="https://xuaii.github.io/images/avatar.png?v=1659664962427" srcset="https://xuaii.github.io/images/avatar.png?v=1659664962427" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://xuaii.github.io" title="由Island and Winds发布" rel="author">Island and Winds<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-08-02</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p>使用 Godot 对<a href="https://www.bilibili.com/video/BV1gi4y1D7Vx?spm_id_from=333.337.search-card.all.click">WindowFrame</a> 进行拙劣的模仿，观察视频中的窗体有以下性质：</p>
+<ol>
+<li>窗体既是 <em>UI</em> 也是可以与玩家互动的 <em>场景物体</em></li>
+<li>窗口的位置可以由场景物理改变也可以由鼠标控制改变</li>
+<li>玩家可以发射子弹，子弹碰到的边进入锁定状态，一段时间后子弹消失，并且解除锁定<br>
+考虑一下几种设计：</li>
+</ol>
+<h2 id="方案一">方案一</h2>
+<p>存在一个窗体对象window和场景对象rect<br>
+<img src="https://xuaii.github.io/post-images/1659391754573.png" alt="" loading="lazy"></p>
+<ol>
+<li>每一帧将rect大小和位置经过MPV变换后同步到窗口大小</li>
+<li>每一个rect 对象有一个默认的初始大小</li>
+<li>rect 对象持有四条边的对象 line，每个line对象有 follow/move/lock/idle状态<br>
+Follow 状态的边跟随 target(player) 运动<br>
+Move 状态的边能被鼠标拖动<br>
+Lock 状态的边在玩家移动过程中充当 <strong>墙</strong> 或 <strong>地板</strong><br>
+Idle 状态，是场景中没有 target 时的状态</li>
+<li>rect 对象实进入场景树的时候生成 windows 对象，并持有，rect退出场景树的时候回收 windows 对象</li>
+<li>各个状态都有对应的 Physics Collision Layer / Mask，例如锁定状态的边会阻挡某些攻击，拖动时和锁定时与玩家的碰撞是不一样的。</li>
+</ol>
+<pre><code class="language-c#">using Godot;
+using System;
+
+public class InteractiveAnchor : RigidBody2D
+{
+    public Vector2 velocity;
+    public bool IsStop = false;
+    public Vector2 StopPosition = Vector2.Zero;
+    ColorRect rect;
+    RandomNumberGenerator _random = new RandomNumberGenerator();
+    public delegate void InteractiveAnchorCallBack(InteractiveAnchor anchor);
+    public InteractiveAnchorCallBack callback;
+    // cache 一旦锁定目标，不可更改！！
+    InteractiveLine AnotherCache = null;
+    public override void _Ready();
+    public void Init(Vector2 _velocity, InteractiveAnchorCallBack _callback);
+    public override void _ExitTree();
+
+//  // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _PhysicsProcess(float delta);
+    // 添加抖动将要删除时 
+    public void _on_DeleteEffect_timeout();
+    void _on_Area2D_body_entered(Node body);
+    void _on_Area2D_body_exited(Node body);
+    void CacheCurrentState(Vector2 origin_global_position);
+}
+public class InteractiveArea : Area2D
+{
+    public override void _Ready();
+    Node Scene;
+    public override void _EnterTree();
+    public override void _PhysicsProcess(float delta);
+    void _on_Area2D_body_entered(Node body);
+    void _on_Area2D_body_exited(Node body);
+}
+
+public class InteractiveBorder : Node2D
+{
+    // 显示区域大小
+    public Rect2 window;
+    [Export] public Rect2 DefalutRect;
+    [Export] public float BorderWidth;
+    public InteractiveLine left;
+    public InteractiveLine right;
+    public InteractiveLine top;
+    public InteractiveLine down;
+    public InteractiveWindow interactiveWindow;
+    public Vector2 Start;
+    public Vector2 End;
+    public Rect2 UIRect;
+    public override void _Ready();
+    public override void _EnterTree();
+    public override void _Draw();
+    public override void _Process(float delta);
+    public override void _PhysicsProcess(float delta);
+    public void Reset();
+    public void SetRect(Rect2 _window);
+    public void SetCollision(bool flag);
+}
+public class InteractiveLine : KinematicBody2D
+{
+    public bool IsLocked;
+    static public string IsSlideName = &quot;&quot;;
+    public SegmentShape2D shape;
+    public InteractiveWindow window;
+    public Vector2 velocity = Vector2.Zero;
+    public int ColllisionCount = 0;
+    [Export] public Vector2 DefaultBias;
+
+    public override void _Ready();
+    public override void _ExitTree();
+    public override void _PhysicsProcess(float delta);
+    public void SetCollision(uint layer, uint mask);
+    public void Reset();
+    public float DistanceToLine(Vector2 P, Vector2 A, Vector2 B);
+}
+public class InteractiveLineFollow : StateNode&lt;InteractiveLine&gt;
+{
+    public override void Enter()
+    {
+        target.SetCollision(target.window.FollowLayer, target.window.FollowMask);
+    }
+    public override void _PhysicsUpdate(float delta)
+    {
+        /// 如果没有目标，就转移到Lock？
+        if(!target.window.IsLockTarget)
+        {
+            _machine.Transition&lt;InteractiveLineIdle&gt;();
+            return;
+        }
+        if(target.window.Target.IsInsideTree())
+        {
+            target.GlobalPosition = target.window.Target.GlobalPosition + target.DefaultBias;
+        }
+
+        if(target.ColllisionCount != 0)
+        {
+            _machine.Transition&lt;InteractiveLineLock&gt;();
+            return;
+        }
+    }
+public class InteractiveLineIdle : StateNode&lt;InteractiveLine&gt;
+{
+    public override void _PhysicsUpdate(float delta)
+    {
+        if(target.window.IsLockTarget)
+        {
+            _machine.Transition&lt;InteractiveLineFollow&gt;();
+            return;
+        }
+    }
+}
+public class InteractiveLineLock : StateNode&lt;InteractiveLine&gt;
+{
+    Vector2 cachePosition = Vector2.Zero;
+    public override void Enter()
+    {
+        target.IsLocked = true;
+        cachePosition = target.Position;
+        target.SetCollision(target.window.LockLayer, target.window.LockMask);
+    }
+    public override void Exit()
+    {
+        target.IsLocked = false;
+    }
+    public override void _PhysicsUpdate(float delta)
+    {
+        // TODO:这里是否可以不移动锁定的目标不移动
+        if(cachePosition != null) target.Position = cachePosition;
+
+        if(target.ColllisionCount == 0)
+        {
+            _machine.Transition&lt;InteractiveLineFollow&gt;();
+            return;
+        }
+        if(Input.IsActionJustPressed(&quot;mouse_right&quot;) &amp;&amp; target.NormalToLine(target.GetGlobalMousePosition(), target.GlobalPosition + target.shape.A, target.GlobalPosition + target.shape.B).Length() &lt; 14f)
+        {
+            // 进入拖动状态
+            _machine.Transition&lt;InteractiveLineMove&gt;();
+            return;
+        }
+    }
+}
+public class InteractiveLineMove : StateNode&lt;InteractiveLine&gt;
+{
+    public override void Enter()
+    {
+        target.SetCollision(target.window.MoveLayer, target.window.MoveMask);
+    }
+    public float PlayerMargin = 50f;
+    private float MoveSpeed = 50f;
+
+    public override void _PhysicsUpdate(float delta)
+    {
+        if(!target.window.IsLockTarget)
+        {
+            _machine.Transition&lt;InteractiveLineIdle&gt;();
+            return;
+        }
+        Vector2 line_movement = target.NormalToLine(target.GetGlobalMousePosition(), target.GlobalPosition + target.shape.A, target.GlobalPosition + target.shape.B);
+        Vector2 player_movement = target.NormalToLine(target.window.Target.GlobalPosition, target.GlobalPosition + target.shape.A, target.GlobalPosition + target.shape.B);
+
+        if(line_movement.Dot(player_movement) &lt; 0f 
+        || !target.window.Target.TestMove(target.window.Target.GlobalTransform, line_movement * delta)
+        || player_movement.Length() &gt; PlayerMargin)
+        {
+            // 鼠标位置与Player在line异侧不限制速度，player与line距离足够大不限制速度；其余情况限制速度
+            if(line_movement.Dot(player_movement) &lt; 0f || player_movement.Length() &gt; PlayerMargin)
+            {
+                target.GlobalPosition += line_movement;
+            }
+            else
+            {
+                target.GlobalPosition += line_movement.Normalized() * MoveSpeed * delta;
+            }
+        }
+
+        if(Input.IsActionJustReleased(&quot;mouse_right&quot;))
+        {
+            _machine.Transition&lt;InteractiveLineLock&gt;();
+            return;
+        }
+    }
+}
+
+public class InteractiveWindow : Node2D
+{
+	// window local position
+	[Export] PackedScene bullet;
+    [Export(PropertyHint.Layers2dPhysics)] public uint MoveMask;
+    [Export(PropertyHint.Layers2dPhysics)] public uint MoveLayer;
+    [Export(PropertyHint.Layers2dPhysics)] public uint FollowMask;
+    [Export(PropertyHint.Layers2dPhysics)] public uint FollowLayer;
+    [Export(PropertyHint.Layers2dPhysics)] public uint LockMask;
+    [Export(PropertyHint.Layers2dPhysics)] public uint LockLayer;
+
+	ShaderMaterial shader;
+	public InteractiveBorder border;
+    Main screen;
+    // canvas + window related
+    WindowDialog dialog;
+    CanvasLayer canvas;
+    // screen effects
+    Tween tween;
+    RandomNumberGenerator _random = new RandomNumberGenerator();
+    Queue&lt;InteractiveAnchor&gt; queue = new Queue&lt;InteractiveAnchor&gt;();
+    // mouse related
+    // physics's disabled area
+    Area2D area;
+    RectangleShape2D shape;
+    [Export] Vector2 SoftMargin = new Vector2(5, 5);
+
+    // target lock related
+    public bool IsLockTarget = false;
+    public KinematicBody2D Target = null;
+    public Console _wrapper;
+	public override void _Ready();
+    public override void _EnterTree();
+    public override void _ExitTree();
+    void _DeferredPrograce()
+    {
+        screen.RemoveChild(canvas);
+        screen.ResetScreen();
+        this.AddChild(canvas);
+    }
+	
+	public override void _PhysicsProcess(float delta)
+	{
+		// 1. window 更新 + 可视区剪裁
+		screen.SetDisplayRect(border.Start, border.End);
+        // 2. windowdialog 对齐
+        dialog.Popup_(border.UIRect.Clip(screen.viewport.GetVisibleRect()));
+        // 3. 物理开启区域对齐
+        area.Position = border.window.Position - SoftMargin;
+        shape.Extents = border.window.Size +  SoftMargin * 2;
+
+	}
+    public void OnWindowGuiInput(InputEvent inputEvent)
+    {
+        if (inputEvent is InputEventMouseButton mouseEvent &amp;&amp; mouseEvent.Pressed)
+		{
+
+			switch ((ButtonList)mouseEvent.ButtonIndex)
+			{
+				case ButtonList.Left:
+				{
+                    if(IsLockTarget)
+                    {
+                        InteractiveAnchor anchor = bullet.Instance&lt;InteractiveAnchor&gt;();
+                        anchor.GlobalPosition = GetGlobalTransform().AffineInverse() * GetViewportTransform().AffineInverse() * (border.Start + mouseEvent.Position);
+                        this.CallDeferred(&quot;add_child&quot;, anchor);
+                        // anchor.CallDeferred(&quot;Init&quot;, border.Start + mouseEvent.Position - BasicFollowCamera.Target.ScreenPosition, (object)EffectCallback);
+                        anchor.Init((border.Start + mouseEvent.Position - BasicFollowCamera.Target.ScreenPosition), EffectCallback);
+                    }		
+					break;
+				}    
+				case ButtonList.WheelUp:
+					break;
+			}
+		}
+        if (inputEvent is InputEventKey keyEvent &amp;&amp; keyEvent.Pressed)
+		{
+
+			switch ((int)keyEvent.Scancode)
+			{
+				case (int)KeyList.L:
+				{
+                    break;
+                }
+			}
+		}
+    }
+    // delete callback
+    public void EffectCallback(InteractiveAnchor anchor);
+    void disturb_offset(float _strength)
+    {
+        dialog.RectPosition += new Vector2(_random.RandfRange(-_strength, _strength), _random.RandfRange(-_strength, _strength));
+        screen.GetNode&lt;TextureRect&gt;(&quot;CanvasLayer/_ScreenTexture&quot;).RectPosition += new Vector2(_random.RandfRange(-_strength, _strength), _random.RandfRange(-_strength, _strength));
+    }
+    public void LockTarget(KinematicBody2D target);
+    public void UnlockTarget();
+    public void EnableBackground();
+    public void DisableBackground();
+    public void SetRect(Rect2 _window);
+    public void Reset();
+    // CommandLine
+    private void LockPlayer();
+    private void _on_ActivateArea_body_entered(Node body);
+}
+
+</code></pre>
+<p>总结：这样的设计有以下缺陷</p>
+<ol>
+<li>拖动 Line 时不能直接修改 velocity，因为拖动时Line有可能会与Player发生碰撞（需要KinematicBody2D 的SlideAndCollide方法更新速度），所以只能设计一种有鼠标位置计算 Line.velocity 的方法。</li>
+<li>窗口Window对象在场景的UI节点下，借此将场景相机的画面绘制到窗口相应的位置，这样设计与物体外的结构耦合。</li>
+<li>如果想实现窗口外的一切对象停止更新比较麻烦（仅仅 Update 相机内的对象），应该有引擎自带的方法比较方便。</li>
+</ol>
+<h2 id="方案二">方案二</h2>
+<p>不使用 UI 对象，将交互和物理全部集中到一个 Rect 对象中。<br>
+<img src="https://xuaii.github.io/post-images/1659395615675.png" alt="" loading="lazy"></p>
+<ol>
+<li>交互窗体包含四条边，每条边包含碰撞设置和鼠标靠近检查（锁定状态）</li>
+<li>每条边拥有相似的几种状态，特别的在拖动时，依然使用velocity来移动每条边<br>
+当鼠标左键按下 &amp;&amp; 鼠标位置在边的拖动区域时 ==&gt; 进入拖动状态<br>
+松开鼠标左键时 ==&gt; 退出拖动状态<br>
+拖动状态下，鼠标位置，边位置，边速度的关系如下</li>
+</ol>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>c</mi><mi>i</mi><mi>t</mi><msub><mi>y</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><mo>(</mo><mi>p</mi><mi>o</mi><msub><mi>s</mi><mi>M</mi></msub><mo>−</mo><mi>p</mi><mi>o</mi><msub><mi>s</mi><mi>L</mi></msub><mo>)</mo><mo>⋅</mo><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><msub><mi>l</mi><mi>L</mi></msub></mrow><mrow><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><msub><mi>l</mi><mi>L</mi></msub><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">velocity_L = \frac{(pos_M - pos_L) \cdot normal_L}{||normal_L||}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∣</span><span class="mord">∣</span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord">∣</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>这样，窗口移动始终比鼠标位置延后一帧，但是移动过程中可以进行物理检测<br>
+3. 窗口根据三条边的位置绘制窗口（场景中绘制），并且生成一个mask覆盖整个屏幕（不使用方案一中生成相机纹理在windows中显示）<br>
+4. 如果某条边的移动会使得 player 与其他物体碰撞，那么该移动应该被修正:<br>
+会与player碰撞的物体有两种可能：<br>
+a. 场景中的物体          -&gt; 丢弃当前的移动<br>
+b.窗体中的自由对边   -&gt; 保持当前移动<br>
+c.窗体中的锁定对边   -&gt; 丢弃当前移动<br>
+为了使移动边感知到玩家的碰撞，需要为边增加一个Push状态（不用增加，写在Move里即可），该状态下每次移动时应该对玩家进行移动测试，如果通过测试则移动否则不移动。<br>
+5. 在边的Move状态下，应该停止相机对 Player的跟踪<br>
+6. 2D 引擎不能如3D一样剔除视锥外的物体，不渲染/不更新窗口外的物体只能通过碰撞来实现<br>
+a. 所有进入窗体的对象将恢复更新，退出窗体的对象停止更新<br>
+b. 场景对象持有所有场景物体的引用，所以当玩家进入窗口时可以直接调用场景节点的Stop方法，这将停止所有除（player，window，obj_in_window）的对象。</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Island and Winds<br>永久链接:
+                                    <a href="https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/" title="游戏机制-窗体互动">
+                                        https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                        <div class="nearby-article-left" style="padding: 10px;">
+                            <a class="prev" rel="prev" href="https://xuaii.github.io/post/you-xi-ji-zhi-li-shi-jie/">
+                                <i class="fa fa-chevron-left"></i>
+                                游戏机制-里世界
+                            </a>
+                        </div>
+                        
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://xuaii.github.io/post/zhuang-tai-ji-de-ji-chong-xie-fa/">
+                                        状态机的几种写法<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/&sharesource=qzone&title=游戏机制-窗体互动&pics=https://xuaii.github.io/images/avatar.png?v=1659664962427&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://xuaii.github.io/post/you-xi-ji-zhi-chuang-ti-hu-dong/&sharesource=weibo&title=游戏机制-窗体互动 + " - " + &pic="https://xuaii.github.io/images/avatar.png?v=1659664962427"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计划',
+                                        url: 'https://xuaii.github.io/tag/DLSgPoOEP/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="https://blog.itjoker.cn">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://github.com" target="_blank">
+                                Github.com
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>
