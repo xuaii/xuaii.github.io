@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1667771736332">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<!-- use my domain directly -->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<!-- <script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" /> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<!-- 添加的关于 markdown 内容 -->
+<!-- <script src=https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js></script>
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                [计算机组成原理] 中央处理器
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/" class="leancloud_visitors" data-flag-title="[计算机组成原理] 中央处理器">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            24.8分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Island and Winds" src="https://xuaii.github.io/images/avatar.png?v=1667771736332" srcset="https://xuaii.github.io/images/avatar.png?v=1667771736332" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://xuaii.github.io" title="由Island and Winds发布" rel="author">Island and Winds<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-09-05</span>
+                                        </div>
+                        </header>
+                        
+
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p>中央处理器(Central Processing Unit，简称CPU)</p>
+<h2 id="cpu-功能和基本结构">CPU 功能和基本结构</h2>
+<h3 id="cpu-功能">CPU 功能</h3>
+<p><strong>指令控制</strong>（取指，分析，执行）</p>
+<p><strong>操作控制</strong>一条指令执行，需要控制的各个门电路信号</p>
+<p><strong>时间控制</strong> 系统时钟</p>
+<p><strong>数据加工</strong> 算术逻辑运算</p>
+<p><strong>中断处理</strong> 异常和特殊请求的处理</p>
+<h3 id="结构">结构</h3>
+<p><strong>运算器</strong></p>
+<p>算术逻辑单元，暂存寄存器，累加寄存器，通用寄存器组，程序状态字寄存器</p>
+<p><strong>控制器</strong></p>
+<p>程序计数器，指令寄存器，指令译码器，存储器地址寄存器，存储器数据寄存器</p>
+<h2 id="指令执行过程">指令执行过程</h2>
+<h3 id="1-指令周期">1. 指令周期</h3>
+<p><strong>取指周期</strong>： 从内存中读取指令</p>
+<p>间址周期：取一次和多次间址</p>
+<p>执行周期：</p>
+<p>中断周期：每条指令执行完成后查询中断请求，如果有中断请求则进入中断周期</p>
+<p>为了区别不同周期，使用标志触发器 FE, IND, EX, INT 表示各个周期，取 1 为有效值</p>
+<h3 id="2-指令周期的数据流">2. 指令周期的数据流</h3>
+<p>取指周期</p>
+<pre><code class="language-c#">PC -&gt; MAR -&gt; 地址总线 -&gt; 主存
+CU读命令 -&gt; 控制总线 -&gt; 主存
+主存 -&gt; 数据总线 -&gt; MDR -&gt; IR
+CU控制信号 -&gt; PC+1
+</code></pre>
+<p>间地周期</p>
+<pre><code class="language-c#">Ad(IR) -&gt; MAR -&gt; 地址总线 -&gt; 主存
+CU 读命令 -&gt; 控制总线 -&gt; 主存
+主存 -&gt; 数据总线 -&gt;MDR
+</code></pre>
+<p>中断周期</p>
+<pre><code class="language-c#">CU控制SP-1， SP-&gt;MAR-&gt;地址总线-&gt;主存
+CU写命令-&gt;控制总线-&gt;主存
+PC-&gt;MDR-&gt;数据总线-&gt;主存（存入断点）
+CU（中断服务程序入口） -&gt; PC
+</code></pre>
+<h3 id="3-指令执行方案">3. 指令执行方案</h3>
+<p>单周期：每条指令时钟周期数固定</p>
+<p>多周期：每条指令使用不同周期数，但是指令只能一条执行完才能执行下一条</p>
+<p>流水线：流水（参考MIPS 五级流水）</p>
+<h2 id="数据通路的功能和基本结构">数据通路的功能和基本结构</h2>
+<h3 id="1-数据通路功能">1. 数据通路功能</h3>
+<p>描述信息从什么地方开始，中间经过了哪些寄存器和开关，传送到哪个寄存器</p>
+<h3 id="2-数据通路结构">2. 数据通路结构</h3>
+<ul>
+<li>
+<p>CPU内单总线方式：所有东西通过公共同通路传输，冲突概率较高，性能低</p>
+</li>
+<li>
+<p>CPU内三总线方式：提高效率，数据总线，地址总线，控制总线</p>
+</li>
+<li>
+<p>专用数据通路方式：需要传送数据的地方直接安排连线，性能高，硬件量大</p>
+</li>
+</ul>
+<p><strong>寄存器间数据传送</strong></p>
+<pre><code class="language-c#">PC -&gt; Bus
+Bus -&gt; MAR
+</code></pre>
+<p><strong>主存 &amp; CPU 信息传送</strong></p>
+<pre><code class="language-c#">PC -&gt; Bus -&gt; MAR
+1 -&gt; R
+MEM(MAR) -&gt; MDR
+MDR -&gt; Bus -&gt; IR
+</code></pre>
+<p><strong>执行算术逻辑运算</strong></p>
+<pre><code class="language-c#">Ad(IR) -&gt; Bus -&gt; MAR
+1 -&gt; R
+MEM-&gt;数据线-&gt;MDR
+MDR -&gt; Bus -&gt;Y
+(ACC) + (Y) -&gt; Z
+Z -&gt; ACC 
+</code></pre>
+<h2 id="控制器">控制器</h2>
+<p>计算机的五大功能部件</p>
+<ul>
+<li>
+<p>控制器部件</p>
+</li>
+<li>
+<p>运算器部件</p>
+</li>
+<li>
+<p>输入设备 / 输出设备</p>
+</li>
+<li>
+<p>内存储器</p>
+</li>
+</ul>
+<p>他们之间通过 <strong>数据总线</strong>、<strong>地址总线</strong>、<strong>控制总线</strong> 相互通信，其中输入输出设备是通过<strong>接口电路</strong>连接的</p>
+<ol>
+<li>
+<p>控制器部件从数据总线接受指令</p>
+</li>
+<li>
+<p>从运算器不见接受<strong>指令转移</strong>地址</p>
+</li>
+<li>
+<p>送出 <strong>指令地址</strong> 到 <strong>地址总线</strong></p>
+</li>
+<li>
+<p>向系统中的部件提供运行所需的<strong>控制信号</strong></p>
+</li>
+</ol>
+<hr>
+<p><strong>控制器的主要功能：</strong></p>
+<ul>
+<li>
+<p><strong>取指令</strong>和指出<strong>下一条指令的地址</strong></p>
+</li>
+<li>
+<p>对指令进行<strong>译码</strong> 和 <strong>测试</strong>，以产生相应操作的<strong>控制信号</strong></p>
+</li>
+<li>
+<p>指挥并控制 CPU、主存、输入输出设备之间的<strong>数据流动方向</strong></p>
+</li>
+</ul>
+<p>根据控制器产生微操作控制信号的方式不同，分为<strong>硬布线控制器</strong> 和 <strong>微程序控制器</strong>， 其中 PC 和 IR 是相同的，但是确定和表示<strong>指令执行步骤</strong>的办法和需要的<strong>控制信号</strong>是不同的</p>
+<h3 id="硬布线控制器">硬布线控制器</h3>
+<p>根据指令要求、当前时序、外部和内部状态，按时间顺序发送一系列<strong>微操作控制信号</strong>（也叫做组合逻辑控制器）。</p>
+<p>区别于微程序控制器使用的微指令，<strong>硬布线控制器</strong>是直接采用组合逻辑电路实现<strong>机器指令</strong>，以 “<em>使用最少零部件，去的最高速度</em>” 作为设计目标，优点是<strong>速度快</strong>（电路延迟），缺点是<strong>不易添加新的功能</strong></p>
+<ol>
+<li>
+<p>硬布线控制单元图</p>
+<p>硬布线控制单元，从 CU 中分离出 <strong>操作码译码器</strong>， <strong>节拍发生器</strong>，其中操作译码器将 N 位操作码翻译为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">2^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span> 位， 再输入 CU。</p>
+<p><strong>节拍发生器</strong> 产生的节拍(T1, T2, T3, ...) 由 <strong>机器主频</strong>(CLK) 分频得到，CU 使用 <strong>操作码</strong>， <strong>节拍信号</strong>， <strong>状态标志</strong> 在不同的节拍输出不同的控制信号（微操作命令 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>）</p>
+<p><strong>使用节拍的原因</strong> 首先信号发出到稳定需要一个极短的时间间隔，所以 CPU 需要有一个最短时间（类似于我们的普朗克时间），其次，一个 <strong>机器指令</strong>，需要由多个微操作来完成，微操作按照<strong>一定的顺序</strong>生效，所以需要<strong>节拍</strong> 来区分微操作顺序 例如：</p>
+<pre><code class="language-markdown">操作A -&gt; 操作B -&gt; 操作C
+
+out = T1 * A + T2 * B + T3 * C
+</code></pre>
+<p>按节拍顺序执行操作，总之技巧是<strong>通过逻辑组合控制各个开关,结合节拍器控制顺序（详见4）</strong></p>
+</li>
+<li>
+<p>硬布线控制器的<strong>时序系统</strong>和<strong>微操作</strong></p>
+<ul>
+<li>
+<p>时钟周期：时钟信号控制的节拍发生器，每个节拍的宽度正好是时钟周期，每个节拍内可以<strong>完成一个/几个需要同时完成的操作</strong></p>
+</li>
+<li>
+<p>机器周期：所有指令执行的<strong>基准时间</strong>（完成一个基本操作需要的时间），通常取存取周期作为基准时间，在存储字长等于指令字长时，存取周期 = 机器周期</p>
+<p>一个机器周期内，完成若干微操作，通过时钟信号控制产生每个微操作</p>
+</li>
+<li>
+<p>指令周期：取出并执行一条指令的时间</p>
+</li>
+<li>
+<p>微操作命令分析：指令分为三个周期 <strong>取值周期</strong>-&gt;<strong>间址周期</strong>-&gt;<strong>执行周期</strong></p>
+<p><strong>取址</strong></p>
+<pre><code class="language-c++">PC       -&gt;     MAR
+1        -&gt;     R
+M(MAR)   -&gt;     MDR
+MDR      -&gt;     IR
+OP(IR)   -&gt;     CU
+(PC) + 1 -&gt;     PC
+</code></pre>
+<p><strong>间址周期</strong></p>
+<pre><code class="language-c++">Ad(IR)   -&gt;    MAR
+1        -&gt;    R
+M(MAR)   -&gt;    MDR
+</code></pre>
+<p><strong>执行周期</strong></p>
+<pre><code class="language-c#">a. 非访存指令
+CLA    // 清ACC
+COM    // 取反
+SHR    // 算术右移
+CSL    // 循环左移
+STOP   // 停机指令
+b. 访存指令
+ADD X  // 加法指令
+Ad(IR) -&gt; MAR, 1 -&gt; R
+M(MAR) -&gt; MDR
+(ACC) + (MDR) -&gt; ACC
+
+STA X  // 存数指令
+Ad(IR) -&gt; MAR, 1 -&gt; W
+ACC -&gt; MDR
+MDR -&gt; M(MAR)
+LDA X  // 取数指令
+Ad(IR) -&gt; MAR, 1 -&gt; R
+M(MAR) -&gt; MDR
+MDR -&gt; ACC
+c. 转移指令
+JMP X     =&gt;    Ad(IR) -&gt; PC
+BAN X     =&gt;    A0 * Ad(IR) + (~A0) * (PC) -&gt; PC
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>CPU 控制方式</p>
+<p>控制一条指令本质是依次执行一个确定的<strong>微操作序列</strong>， 不同指令对应的微操作<strong>数量</strong>和<strong>复杂度</strong>不一样,因此每条指令执行时间不相同，使用以下三种方法控制：</p>
+<p><strong>同步控制</strong></p>
+<p>所有控制信号都来自统一系统时钟，一<strong>最长</strong>微操作和<strong>最繁琐</strong>微操作为标准，采取<strong>统一</strong>、<strong>相同时间间隔</strong>、<strong>相同节拍数</strong> 作为机器周期来运行不同指令</p>
+<p>特点：简单，速度慢（因为短命令也需要经过长周期）</p>
+<p><strong>异步控制</strong></p>
+<p>不存在 <em>基准信号</em>，各个部件按照自身固有速度工作，通过异步应答方式交流</p>
+<p>特点：快速，控制复杂</p>
+<p><strong>联合控制</strong></p>
+<p>介于同步和异步之间，对不同的指令的微操作实行<strong>大部分采用同步控制</strong>，<strong>小部分采用异步控制</strong></p>
+</li>
+<li>
+<p>硬布线控制单元设计步骤</p>
+<p><strong>步骤一:</strong>  列出微操作命令时间表</p>
+<p>以下是 CLR， COM， SHR 等10条机器指令微操作命令的时间表，观察表结构，共有<strong>工作周期标记</strong>、<strong>节拍</strong>、<strong>状态条件</strong>、<strong>微操作命令信号</strong>、<strong>微操作命令</strong>表项，其中一个工作周期可能包含多个节拍， 其中一个节拍内可以完成多个<strong>独立的微操作命令（不独立的命令会造成冲突）</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://xuaii.github.io/post-images/1662435646503.JPG" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://xuaii.github.io/post-images/1662435655639.JPG" alt="" loading="lazy"></figure>
+<p><strong>步骤二:</strong>  微操作信号综合</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">微</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">控</mi><mi mathvariant="normal">制</mi><mi mathvariant="normal">信</mi><mi mathvariant="normal">号</mi><mo>=</mo><mi mathvariant="normal">机</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">周</mi><mi mathvariant="normal">期</mi><mo>∧</mo><mi mathvariant="normal">节</mi><mi mathvariant="normal">拍</mi><mo>∧</mo><mi mathvariant="normal">脉</mi><mi mathvariant="normal">冲</mi><mo>∧</mo><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">码</mi><mo>∧</mo><mi mathvariant="normal">机</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">状</mi><mi mathvariant="normal">态</mi><mi mathvariant="normal">条</mi><mi mathvariant="normal">件</mi></mrow><annotation encoding="application/x-tex">微操作控制信号 = 机器周期 \land 节拍 \land 脉冲 \land 操作码 \land 机器状态条件
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">微</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">控</span><span class="mord cjk_fallback">制</span><span class="mord cjk_fallback">信</span><span class="mord cjk_fallback">号</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord cjk_fallback">机</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">周</span><span class="mord cjk_fallback">期</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">拍</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord cjk_fallback">脉</span><span class="mord cjk_fallback">冲</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">码</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">机</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">状</span><span class="mord cjk_fallback">态</span><span class="mord cjk_fallback">条</span><span class="mord cjk_fallback">件</span></span></span></span></span></p>
+<p>根据表构造逻辑表达式，然后经过化简整理得到可用现有门电路实现的微操作命令逻辑表达式：</p>
+<figure data-type="image" tabindex="3"><img src="https://xuaii.github.io/post-images/1662435665517.JPG" alt="" loading="lazy"></figure>
+<p><strong>步骤三:</strong> 绘制微操作命令组合电路图（没什么技巧，就嗯画）</p>
+<figure data-type="image" tabindex="4"><img src="https://xuaii.github.io/post-images/1662435671505.JPG" alt="" loading="lazy"></figure>
+</li>
+</ol>
+<h3 id="微程序控制器">微程序控制器</h3>
+<p>在电路和机器指令之间添加了一层<strong>微程序</strong>，根据机器指令生成<strong>微指令序列</strong>（微程序），使用微程序来实现机器指令功能，而微程序是存储在 <strong>控制存储器（CM in CPU）</strong> 中的指令序列，优点是<strong>规整</strong>、<strong>灵活</strong>、<strong>可维护</strong>，缺点是每次都要从 <strong>CM</strong> 中取微指令，<strong>速度慢</strong></p>
+<ol>
+<li>
+<p>微程序控制<strong>基本概念</strong></p>
+<p>就是把微操作信号 <strong>代码化</strong>， 使每条机器指令转化为一段微程序存入<strong>控制存储器</strong>中（CM），微程序包含若干微指令，每条微指令对应1/n个微操作。</p>
+<p><strong>微命令 &amp; 微操作</strong> ： 机器指令 -&gt; 微操作序列，在微程序控制计算机中，将控制部件向执行部件发送的<strong>控制命令</strong>称为<strong>微命令</strong>，例如：打开或关闭某个门电位信号，微操作是微命令的执行过程。</p>
+<p>注意微命令的 <strong>相容</strong> 和 <strong>相斥</strong></p>
+<p><strong>微指令 &amp; 微周期</strong>：微指令是若干微命令的集合（命令就是一位，指令就是一行），存放为微指令的控制存储器单元地址成为<strong>微地址</strong>，微指令包含两部分信息：</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>操作控制字段：控制信号</p>
+</li>
+<li>
+<p>顺序控制字段：下一条微指令地址</p>
+<p>微周期是指读取并执行一条微指令花费的时间</p>
+<p><strong>主存储器 &amp; 控制存储器</strong>：主存是在 CPU 外部的RAM， 控制存储器是在 CPU 内部的ROM</p>
+<p><strong>程序 &amp; 微程序</strong>： 微程序是机器指令的实时<strong>解释器</strong>，是在CPU 制造时预先设计和存储的，对程序员透明的</p>
+<p><strong>相关寄存器</strong>：<strong>地址寄存器(MAR)</strong>， <strong>微地址寄存器(CMAR)</strong>，<strong>指令寄存器(IR)</strong>，<strong>微指令寄存器(CMDR / <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>IR)</strong></p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>微程序控制器<strong>组成</strong>和<strong>工作过程</strong></p>
+<p><strong>组成</strong></p>
+<p>控制存储器，微指令寄存器，微地址形成部件（产生最初地址和后继地址），微地址寄存器</p>
+<figure data-type="image" tabindex="5"><img src="https://xuaii.github.io/post-images/1662435681568.png" alt="" loading="lazy"></figure>
+<p><strong>工作过程</strong></p>
+<p>取微指令公共操作 <strong>==&gt;</strong> 机器开始时，自动将取指微程序入口地址送入 CMAR，并取址；一般时 CM 的 0号地址，该微程序完成后 主存中取出的机器指令就存储在 IR 中</p>
+<p>IR 操作码 ==&gt; 微地址形成部件 ==&gt; 微程序入口地址 ==&gt; CMAR</p>
+<p>从CM 中逐条取出指令并执行，执行完一段微程序后回到<strong>取址微程序入口</strong>，周而复始</p>
+</li>
+<li>
+<p>微指令的<strong>编码方式</strong></p>
+<p><strong>直接编码</strong> ： 无需译码，每一位表示一个微命令，简单直观快速，并行性好，缺点是控制存储器容量变大</p>
+<p><strong>字段直接编码</strong>：将微指令的微命令分成若干<strong>小段</strong>，把互斥性微命令组合在同一字段，把相容性微命令组合在不同字段，每个字段独立编码，各个字段编码单独定义，互不干扰</p>
+<p>优点：缩短字长</p>
+<p>缺点：通过译码电路减速</p>
+<p>分段原则</p>
+<ul>
+<li>
+<p>互斥命令同段，相容命令不同段</p>
+</li>
+<li>
+<p>每个段信息为不能太多</p>
+</li>
+<li>
+<p>每个小段留出一个状态表示无命令（000），因此状态数 = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+</li>
+</ul>
+<p><strong>字段间接编码</strong>：一个字段某些命令需要由另一些字段来解释，进一步减小了字长，削弱了并行能力，通常作为辅助手段</p>
+</li>
+<li>
+<p>微指令的<strong>地址形成方式</strong></p>
+<p>有两种基本类型</p>
+<ul>
+<li>
+<p>直接由微指令的下地址字段指出（断定方式）</p>
+</li>
+<li>
+<p>根据机器指令的操作码形成，通过微地址形成部件形成</p>
+</li>
+</ul>
+<p>几种额外类型：</p>
+<ul>
+<li>
+<p>增量计数 (CMAR) + 1 -&gt; CMAR, 连续存放</p>
+</li>
+<li>
+<p>根据标志位决定微指令分支转移地址</p>
+</li>
+<li>
+<p>通过测试网络形成</p>
+</li>
+<li>
+<p>由硬件直接产生微程序入口地址</p>
+</li>
+</ul>
+<p>加电后第一条微指令地址可以由专门的硬件电路产生</p>
+</li>
+<li>
+<p>微指令的<strong>格式</strong></p>
+<ul>
+<li>
+<p>水平型微指令： 指令中一位对应一个控制信号，优点：程序短，执行速度快；缺点：微指令长，编写微程序麻烦</p>
+</li>
+<li>
+<p>垂直型微指令：采用类似机器指令的 操作数 | 操作码 | 操作码 的结构，优点：微指令短，简单，规整，便于编写；缺点是微程序长执行速度慢</p>
+</li>
+<li>
+<p>混合型微指令：在垂直型的基础上增加一些不太复杂的并行操作，性能折中</p>
+</li>
+</ul>
+</li>
+<li>
+<p>微程序<strong>控制单元</strong>的<strong>设计步骤</strong></p>
+<p><strong>写出微操作命令的节拍安排</strong> 这里与之前的微操作表的区别是：</p>
+<ul>
+<li>
+<p>取指阶段需要将 IR的操作码送往微地址形成部件, OP(IR) -&gt; CMAR</p>
+</li>
+<li>
+<p>每条微指令执行完成后都需要形成后继微指令 , 微地址形成部件 -&gt; CMAR</p>
+</li>
+</ul>
+<p><strong>确定微指令格式</strong> 微指令编码方式，后继指令形成方式，微指令字长</p>
+<p>一般根据微操作个数决定编码方式，确定微指令操作控制字段位数，</p>
+<p>由微指令数决定微指令顺序控制字段位数</p>
+<p>按操作控制字段位数和顺序控制字段位数决定微指令字长</p>
+</li>
+<li>
+<p><strong>动态微程序设计</strong>和<strong>毫微程序设计</strong></p>
+<p>动态微程序就是可以更改的微程序，一般使用 EPROM，豪微程序试就是在微程序和电路之间再增加一层解释程序</p>
+</li>
+</ol>
+<h2 id="异常和中断机制">异常和中断机制</h2>
+<h3 id="概念">概念</h3>
+<p><strong>异常</strong> 是 CPU 内部产生的意外事件，被称为内中断，是内部检测，与执行的指令相关的同步事件</p>
+<p><strong>中断</strong> 是 CPU 发出的中断请求，被称为外中断，由外部设备触发，与当前执行指令无关</p>
+<p>描述如下：</p>
+<p>CPU 在执行用户程序<strong>第 i 条指令是检测到异常事件</strong> 或 <strong>第 i 条指令后发现一个中断请求信号</strong>，则 CPU 打断当前用户程序，然后转到相应的<strong>异常或中断处理程序</strong>去执行。</p>
+<ul>
+<li>
+<p>若异常或中断处理程序能解决相应问题，则在处理程序的最后 CPU 指向异常或中断返回指令，回到被打断的用户程序第 i 条指令或 第 i + 1 条指令继续执行</p>
+</li>
+<li>
+<p>若异常或中断处理程序发现是不可恢复的致命错误，则终止用户程序</p>
+</li>
+</ul>
+<p>一般来说，对终端和异常的具体处理由操作系统（和驱动程序）完成</p>
+<h3 id="分类">分类</h3>
+<p><strong>异常的分类</strong></p>
+<ol>
+<li>
+<p>故障（Fault）：在故障指令启动后，指令结束前被检查到的异常事件，例如：<em>译码时出现非法操作码</em>；<em>取数据时发生缺页缺段</em>；<em>除数为0</em>；其中有的能通过磁盘调入主存来解决，像除数为0这样的异常不能解决并回到原断点继续执行，必须终止进程的执行</p>
+</li>
+<li>
+<p>自陷（Trap）：是<strong>预先安排</strong>的一种异常，事先在程序中用一条特殊的指令或通过特殊标志的设定来人为造成陷阱，执行到被设置了陷阱的指令时，CPU 在执行完自陷指令后，自动根据不同陷阱进行相应处理，然后返回自陷指令的下一条执行。</p>
+<p>特别的，如果当前指令是转移指令，那不会返回到下一条指令继续执行，而是返回到目标指令继续执行</p>
+<p>例如：<strong>程序断点调试</strong>， <strong>系统调用指令</strong>，<strong>条件自陷指令</strong>都属于陷阱指令，执行到这些指令时，无条件的或有条件的<strong>自动调出操作系统内核程序</strong>进行执行</p>
+<p><strong>故障异常</strong>和<strong>自陷异常</strong>属于<strong>程序性异常</strong></p>
+</li>
+<li>
+<p>终止（Abort）：指令执行过程中发生了使计算机无法继续执行的硬件故障，如<strong>控制器出错</strong>，<strong>存储器校验错误</strong>等，程序无法继续执行，只能终止，此时调出中断服务程序来重启系统，这种异常和故障<strong>不由特定指令造成</strong>，而是<strong>随机发生</strong>的，属于硬件异常</p>
+</li>
+</ol>
+<p><strong>中断的分类</strong></p>
+<ol>
+<li>
+<p>可屏蔽中断：通过<strong>可屏蔽中断请求线INTR</strong>  向 CPU 发送的中断请求，CPU可通过在中断控制器中设置相应的屏蔽字来屏蔽或不屏蔽它，被屏蔽的中断请求不会送到 CPU</p>
+</li>
+<li>
+<p>不可屏蔽中断：通过专门的 <strong>不可屏蔽中断请求线NMI</strong> 向 CPU 发出中断请求，通常是紧急的硬件故障，如电源掉电</p>
+</li>
+</ol>
+<h3 id="响应">响应</h3>
+<p>过程为 ： 关中断 -&gt; 保存断点和程序状态 -&gt; 识别异常和中断并转移到相应的处理程序</p>
+<ul>
+<li>
+<p>**<strong>关中断</strong></p>
+<p>在保存断点和程序状态期间不能被新的中断打断，通过设置<strong>中断允许(IF)触发器</strong> 来实现禁止响应新的中断：</p>
+</li>
+<li>
+<p>IF == 1 开中断，允许响应中断</p>
+</li>
+<li>
+<p>IF == 0 关中断，不允许响应中断</p>
+</li>
+<li>
+<p><strong>保存断点和程序状态</strong></p>
+</li>
+</ul>
+<p>将程序断点（返回地址）送到栈或特定寄存器，通常保存在栈中（为了支持<strong>异常或中断的嵌套</strong>），状态字寄存器 PSWR 也需要保存到栈或者特定寄存器中。</p>
+<ul>
+<li><strong>识别异常和中断并转移到相应处理程序</strong></li>
+</ul>
+<p>异常大多数采用软件识别，中断由硬件识别和软件识别两种方式</p>
+<p><strong>软件识别</strong>是 CPU 设置一个异常状态寄存器，用于记录异常原因。操作系统使用一个统一的异常或终端查询程序，按优先级查询异常状态寄存器，以检查中断或异常的类型，先查询到的先处理，然后转到内核中相应处理程序</p>
+<p><strong>硬件识别</strong>也就是<strong>向量中断</strong>，异常或中断程序的首地址称为<strong>中断向量</strong>，所有中断向量存放在<strong>中断向量表</strong>中，每个异常或中断都被指定一个<strong>中断类型号</strong>，在中断向量表中类型号和中断向量一一对应，因为可以根据类型号快速找到对应的处理程序。</p>
+<p>中断或异常的响应是<strong>不可被打断</strong>的。中断响应结束后 CPU 就从 PC 中取出中断服务程序的第一条指令开始执行，直到中断返回，整个过程是由软硬件协同完成的</p>
+<h2 id="指令流水线">*指令流水线</h2>
+<h3 id="1-基本概念">1. 基本概念</h3>
+<p>MIPS 指令流水将指令分成以下五个阶段，每一个时钟到来就会有一条指令进入流水</p>
+<ul>
+<li>
+<p>取指(IF) 从存储器/Cache中取指令（PC，指令寄存器，下一条指令地址计算逻辑）</p>
+</li>
+<li>
+<p>译码(ID) 对指令进行译码，（操作控制器，去操作数逻辑，立即数符号扩展）</p>
+</li>
+<li>
+<p>执行(EX) 执行运算/计算地址，（ALU，分支地址计算模块）</p>
+</li>
+<li>
+<p>访存(MEM) 访问存储器，（数据存储器读写模块）</p>
+</li>
+<li>
+<p>写回(WB) 将计算结果写回寄存器堆， （寄存器写入控制模块）</p>
+</li>
+</ul>
+<p>区分阶段的企图是，划分 CPU 运行过程中的阶段，分析他们的关联性方便<strong>同时多条指令在不同部件上</strong>运行</p>
+<p>流水原则：流水阶段个数以最复杂指令所用的功能段个数为准，流水长度以最耗时操作花费时间为准</p>
+<p>便于流水的<strong>指令集特征</strong>：</p>
+<ul>
+<li>
+<p>指令长度尽量一致，简化取指，译码</p>
+</li>
+<li>
+<p>指令格式尽量规整，比如第几位是寄存器编号，第几位是地址，这样方便指令未知时直接通过<strong>位数</strong>取操作数</p>
+</li>
+<li>
+<p>采用 Load / Store 指令，这样可以包访存指令的地址计算和运算指令的执行步骤规整在同一周期（不懂什么意思）</p>
+</li>
+<li>
+<p>数据和指令对齐存放，减少访存次数</p>
+</li>
+</ul>
+<p><strong>大量连续任务</strong>才能提高流水效率，流水<strong>延长单个指令</strong>执行时间，<strong>缩短整体</strong>执行时间</p>
+<p><em>Tips:流水线需要多个锁存器来存储上一流水阶段的计算结果，控制信号，等来进行下一阶段计算</em></p>
+<figure data-type="image" tabindex="6"><img src="https://xuaii.github.io/post-images/1662522792155.JPG" alt="" loading="lazy"></figure>
+<h3 id="2-流水线冒险">2. 流水线冒险</h3>
+<p><strong>结构冒险</strong> 多条指令同时访问同一资源（例如：存储器，取指和访存都要访问）</p>
+<p>解决：</p>
+<ul>
+<li>
+<p>访存时流水暂停</p>
+</li>
+<li>
+<p>区分数据存储器 和 指令存储器（事实上 L1 cache 就是这样区分的）</p>
+</li>
+</ul>
+<p><strong>数据冒险</strong></p>
+<p>分为 <em>写后读</em>、 <em>读后写</em>、 <em>写后写</em> 三种</p>
+<p>解决：</p>
+<ul>
+<li>
+<p>流水暂停(stall，硬件实现), NOP空指令(编译器实现)</p>
+</li>
+<li>
+<p>数据旁路技术（数据前推）</p>
+</li>
+<li>
+<p>编译优化调整指令顺序</p>
+</li>
+</ul>
+<p><strong>控制冒险</strong></p>
+<p><em>指令跳转</em>、<em>调用过程</em>、<em>返回</em>等会改变 PC 寄存器值的指令，会导致<strong>控制冒险</strong></p>
+<p>以前采用延迟槽方法（即在跳转指令后插入无论如何都要执行的指令），现代 CPU 都使用<strong>分支预测</strong>的方法，预测成功什么都不会发生，预测失败就<strong>清空流水线</strong></p>
+<p>解决：</p>
+<ul>
+<li>
+<p>分支预测 （分为动态和静态预测）</p>
+</li>
+<li>
+<p>预取转移成功和不成功两个方向的指令</p>
+</li>
+<li>
+<p>加快提前形成条件码</p>
+</li>
+<li>
+<p>提高转移方向的<strong>猜准率</strong></p>
+</li>
+</ul>
+<h3 id="3-性能指标">3. 性能指标</h3>
+<p><strong>流水线吞吐率(TP)</strong></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>P</mi><mo>=</mo><mfrac><mi>n</mi><msub><mi>T</mi><mi>k</mi></msub></mfrac><mo>=</mo><mfrac><mi>n</mi><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>∗</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mspace linebreak="newline"></mspace><mi>T</mi><msub><mi>P</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><munder><mi>lim</mi><mo>⁡</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mfrac><mi>n</mi><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>∗</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">TP = \frac{n}{T_k} = \frac{n}{(k+n-1)*\Delta t}\\
+TP_{max} = \lim\limits_{n\rightarrow\infty}\frac{n}{(k+n-1)*\Delta t} = \frac{1}{\Delta t}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9435600000000002em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.0435600000000003em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.0435600000000003em;vertical-align:-0.936em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p><strong>流水线加速比(S)</strong></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mfrac><msub><mi>T</mi><mn>0</mn></msub><msub><mi>T</mi><mi>k</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mi>k</mi><mi>n</mi><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>∗</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mspace linebreak="newline"></mspace><msub><mi>S</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><munder><mi>lim</mi><mo>⁡</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mfrac><mrow><mi>k</mi><mi>n</mi><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>∗</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">S = \frac{T_0}{T_k} = \frac{kn\Delta t}{(k+n-1)*\Delta t}\\
+S_{max} = \lim\limits_{n\rightarrow\infty}\frac{kn\Delta t}{(k+n-1)*\Delta t} = k
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.19633em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.30744em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">n</span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.30744em;vertical-align:-0.936em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">n</span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+<p>其中，n 是指令数量， k 是流水阶段数， <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathdefault">t</span></span></span></span> 是时钟周期</p>
+<h3 id="4-高级流水线技术">4. 高级流水线技术</h3>
+<p>处理机一次发射多条指令的<strong>多发射技术</strong>，增加流水线级数的<strong>超流水线技术</strong></p>
+<p>超标量流水线技术：不能调整指令执行顺序，并行执行指令搭配</p>
+<p>超长指令字技术：也称静态多发射技术，编译程序挖掘程序潜在并行性，将多条能并行的指令组合成一条具有多个操作码的指令（几百位），需要多个部件处理</p>
+<p>超流水线技术：增加级数，每级的操作量减小，纳闷呢时钟周期就可以减小，但是依然是一个周期进入一条指令，总的来讲效率提高</p>
+<h2 id="多处理器基本概念">多处理器基本概念</h2>
+<h3 id="sisd-simd-mimd">SISD、SIMD、MIMD</h3>
+<p><strong>SISD</strong> 是传统的串行计算机结构，包含一个处理器一个存储器，指令按规定顺序执行，SISD 为了提高效率采用流水的方式，之前的内容大都是 SISD 结构</p>
+<p><strong>SIMD</strong> 是指一个指令同时对多个数据流进行处理，成为<strong>数据级并行技术</strong>，通常由<strong>一个指令控制部件</strong>、<strong>多个处理单元</strong>组成，每个单元执行同一条指令，但每个处理单元都有自己的地址寄存器，因此每个单元都有不同的数据地址，因此，<strong>不同处理单元在不同数据集上执行相同的指令</strong>。</p>
+<p>一个应用程序被编译后可能按SISD在串行硬件上执行，也可能按SIMD 组织并运行于并行硬件上</p>
+<p>SIMD 在使用 for 循环处理数组时最有效，例如：对16对数据进行运算的 SIMD 指令如果在16个ALU中同时运算，只需要一次运算时间就能完成。SIMD 在使用 case-switch 语句时效率最低，此时每个执行单元必须<strong>根据不同数据执行不同操作</strong>。</p>
+<p><strong>MISD</strong> 是同时执行多条指令，处理同一个数据，实际上不存在这样的计算机</p>
+<p><strong>MIMD</strong> 同时执行多条指令处理不同数据，分为<strong>多计算机系统</strong> 和 <strong>多处理器系统</strong></p>
+<p>多计算机系统中每个计算机节点都具有各自私有的存储器，和独立的主存空间，不能相关通过存取指令访问。需要通过消息传递进行数据传送。</p>
+<p>多处理器系统是<strong>共享多处理器系统SMP</strong>的简称，它共享单一地址空间，通过存取指令访问多有存储器</p>
+<h3 id="硬件多线程">硬件多线程</h3>
+<p>目的减小线程切换开销</p>
+<ol>
+<li>
+<p>细粒度多线程</p>
+<p>多个线程之间轮流交换执行指令，线程间指令不相关，可以乱序并行执行。处理器能在<strong>每个时钟周期</strong>切换线程</p>
+</li>
+<li>
+<p>粗粒度多线程</p>
+<p>在线程出现较大开销阻塞时切换线程，如 cache 缺失。这种情况下，当发生流水阻塞时，必须清除被阻塞的流水线，新的线程指令开始执行前需要重载流水线，因此开销很大</p>
+</li>
+<li>
+<p>同时多线程（SMT）</p>
+<p>是上述两种多线程技术的变体。在实现指令级并行的同时，实现线程级并行，也就是说，在一个时钟周期内，发射多个不同线程中的多条指令执行。Intel 中的<strong>超线程技术</strong>就是同时对线程，即在一个单处理器或单个核中设置两套线程状态部件，共享高速缓存和功能部件。</p>
+</li>
+</ol>
+<h3 id="多核处理器">多核处理器</h3>
+<p>多个处理单元集成到单个CPU，每个核可以有自己的 cache，也可以共享 cache，共享主存储器</p>
+<h3 id="共享内存多处理器">共享内存多处理器</h3>
+<p>通过存储器中的共享变量相互通信，可以在各个处理器自己的虚拟地址空间单独运行</p>
+<ul>
+<li>
+<p>统一存储访问（UMA）多处理器：分为<strong>基于总线</strong>，<strong>基于交叉开关网络</strong>，<strong>基于多级交换网络</strong> 连接等几种处理器</p>
+</li>
+<li>
+<p>非统一存储访问（NUMA）多处理器：处理器中不带高速缓存时被称为 NC-NUMA，带有一致性高速缓存时被称为 CC-NUMA</p>
+</li>
+</ul>
+<p>最初内存控制器没有整合进 CPU， 需要通过北桥的内存控制器访问内存，这种架构随着 多核 CPU 的发展而达到瓶颈（争用前端总线），所以NUMA 架构诞生，每个 CPU 分配一个内存区域，而 CPU 之间通过 QPI 总线相连，CPU 通过 QPI 访问其他CPU的远程内存。</p>
+<p>由于内存共享， 对于共享变量需要使用同步机制，例如对变量加锁 3</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Island and Winds<br>永久链接:
+                                    <a href="https://xuaii.github.io/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/" title="[计算机组成原理] 中央处理器">
+                                        https://xuaii.github.io/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                        <div class="nearby-article-left" style="padding: 10px;">
+                            <a class="prev" rel="prev" href="https://xuaii.github.io/post/wa-keng-c-c-python-de-lambda-biao-da-shi/">
+                                <i class="fa fa-chevron-left"></i>
+                                [挖坑] c++ / c# / python 的 Lambda 表达式
+                            </a>
+                        </div>
+                        
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://xuaii.github.io/post/you-xi-ji-zhi-li-shi-jie-ji-zhi-you-hua/">
+                                        [游戏机制] 里世界机制优化<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xuaii.github.io/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xuaii.github.io/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/&sharesource=qzone&title=[计算机组成原理] 中央处理器&pics=https://xuaii.github.io/images/avatar.png?v=1667771736332&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://xuaii.github.io/post/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/&sharesource=weibo&title=[计算机组成原理] 中央处理器 + " - " + &pic="https://xuaii.github.io/images/avatar.png?v=1667771736332"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'CYFKzMa2Qb2WGxCgVV2PLhit-gzGzoHsz',
+        appKey: 'NafP7wLckvLJOXjRfRJ6SV7C',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷idea',
+                                        url: 'https://xuaii.github.io/tag/RH8VFDFV9/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷优化',
+                                        url: 'https://xuaii.github.io/tag/3u8paddqN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷关卡设计',
+                                        url: 'https://xuaii.github.io/tag/4wlI74y2BW/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Godot',
+                                        url: 'https://xuaii.github.io/tag/n-3KDzmbKR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计算机组成原理',
+                                        url: 'https://xuaii.github.io/tag/q7ogHTpxn/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷CPU',
+                                        url: 'https://xuaii.github.io/tag/nk7eMi6weI/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷指令集',
+                                        url: 'https://xuaii.github.io/tag/y0QD2lmwzR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷我的世界',
+                                        url: 'https://xuaii.github.io/tag/Oe6pf-JNw/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编译原理',
+                                        url: 'https://xuaii.github.io/tag/-xYITLanXJ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷自动化',
+                                        url: 'https://xuaii.github.io/tag/QU-T8fr1fk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷挖坑',
+                                        url: 'https://xuaii.github.io/tag/aYIh6YBFp/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷摘抄',
+                                        url: 'https://xuaii.github.io/tag/aMOS10oo8/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷c++',
+                                        url: 'https://xuaii.github.io/tag/z4Tg_U8wV/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷反射',
+                                        url: 'https://xuaii.github.io/tag/S6muC6Uh7u/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷godot',
+                                        url: 'https://xuaii.github.io/tag/Dqmvh-Mfk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编辑器插件',
+                                        url: 'https://xuaii.github.io/tag/2btgH2JlXq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏开发',
+                                        url: 'https://xuaii.github.io/tag/jy5L0E1G3/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷总结',
+                                        url: 'https://xuaii.github.io/tag/qmCbMC82l_/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷决策树',
+                                        url: 'https://xuaii.github.io/tag/zPTyWgNBT/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷机器学习',
+                                        url: 'https://xuaii.github.io/tag/cJZOT8XITZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷线性模型',
+                                        url: 'https://xuaii.github.io/tag/49U0AO548/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷神经网络',
+                                        url: 'https://xuaii.github.io/tag/YsZNZqLqv/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷SVM',
+                                        url: 'https://xuaii.github.io/tag/TUnAlz6DG/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷转载',
+                                        url: 'https://xuaii.github.io/tag/QvoiM26MU/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '马里奥-Ground',
+                                        url: 'http://music.163.com/song/media/outer/url?id=31719143.mp3',
+                                        artist: '',
+                                        cover: 'http://p2.music.126.net/CSH0Y-N4RWqCNmJBt3yT-Q==/19211766672383482.jpg?param=50y50',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                                <a target="_blank" href="https://pages.github.com/" title="">Powered by Github Pages</a>
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

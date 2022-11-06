@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1667771736332">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<!-- use my domain directly -->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<!-- <script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" /> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<!-- 添加的关于 markdown 内容 -->
+<!-- <script src=https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js></script>
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                [AI] Auxiliary positioning and tracker
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/you-xi-wai-gua-ai-zi-miao/" class="leancloud_visitors" data-flag-title="[AI] Auxiliary positioning and tracker">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            11.5分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Island and Winds" src="https://xuaii.github.io/images/avatar.png?v=1667771736332" srcset="https://xuaii.github.io/images/avatar.png?v=1667771736332" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://xuaii.github.io" title="由Island and Winds发布" rel="author">Island and Winds<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-09-13</span>
+                                        </div>
+                        </header>
+                        
+
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p><strong>参考列表</strong><br>
+<a href="http://study.yali.edu.cn/pythonhelp/extending/embedding.html">Python embedding</a></p>
+<p><a href="http://t.zoukankan.com/watermoon-p-4367528.html">c++多线程调用python</a></p>
+<p><a href="https://github.com/Baiyuetribe/ncnn-models/tree/main/object_dection/yolov7">yolov7-ncnn</a></p>
+<p><a href="https://github.com/dog-qiuqiu/Yolo-FastestV2">Yolo-FastestV2</a></p>
+<p><a href="https://blog.csdn.net/u012483097/article/details/109069388">ncnn教程</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/391609325">ncnn 环境</a></p>
+<p><a href="https://blog.csdn.net/znsoft/article/details/117128781">opencv之Mat格式数据转换成onnxruntime的输入tensor处理的c++写法</a></p>
+<p><a href="https://tryolabs.github.io/norfair/reference/tracker/#norfair.tracker.Tracker">Tracker - Norfair</a></p>
+<p><a href="https://www.bilibili.com/read/cv11146846">FPS游戏的鼠标灵敏度换算方法</a></p>
+<p><a href="https://github.com/phoboslab/jsmpeg-vnc">phoboslab/jsmpeg-vnc</a></p>
+<p><a href="https://learn.microsoft.com/zh-cn/windows/win32/direct3ddxgi/desktop-dup-api">桌面复制 API - Win32 apps | Microsoft Learn</a><a href="https://learn.microsoft.com/zh-cn/windows/win32/direct3ddxgi/desktop-dup-api">桌面复制 API - Win32 apps | Microsoft Learn</a></p>
+<p>最近看到有些 FPS 游戏主播被锤外挂，不禁有些感叹 人菜逼事多。所以产生了研究AI自瞄原理的想法。首先做AI自瞄不是想开挂，而是对于反外挂而言 只有了解Hacker才能Anti-Hacker。</p>
+<h2 id="总体思路">总体思路</h2>
+<p>传统的 FPS 游戏外挂需要<strong>读内存</strong>、<strong>改内存</strong>，因此很容易被检测。而 AI 自瞄只读取游戏画面(可以通过<strong>屏幕捕获</strong>、<strong>外置摄像头</strong>)，通过<strong>目标检测方法</strong> 准确的识别出游戏中的目标的类型和位置，然后通过各种<strong>移动准星</strong>的方法将准星移动到目标位置，AI 自瞄系统应该仅提供基础设施（识别系统、脚本系统、配置系统），玩家可以自定义视频输入方式，通过脚本系统定义 &quot;如何瞄准敌人&quot;（添加抖动等），定义识别系统的参数。</p>
+<p>// 为了高效运行，外挂的运行时使 C/C++，脚本系统使用 Python / C#</p>
+<p>但是，将屏幕捕获交给玩家会加重识别系统的的任务（识别敌人 + 识别屏幕），再加上坐标变换后降低了准确度，为了使识别准确度尽可能提高，将采用捕获屏幕作为输入。</p>
+<p>github <a href="https://github.com/xuaii/apex-auto-aim">项目地址</a></p>
+<h2 id="读取游戏画面"><strong>读取游戏画面</strong></h2>
+<p><a href="https://blog.csdn.net/tuan8888888/article/details/120761111">windows 屏幕抓取技术总结</a> 总结了windows 下各个平台的屏幕抓取性能开销对比，但是和我实测的数据有些偏差，在我实测中 DXGI 几乎不消耗 CPU/GPU 资源，GDI方案消耗大量的 CPU 资源。但是在启动了 APEX 的情况下 DXGI 仅能达到 90fps， GDI 能达到 200fps，所以我们的方案采用 GDI 方法，GDI 抓屏参考(几乎是copy)了 <a href="https://github.com/phoboslab/jsmpeg-vnc">phoboslab/jsmpeg-vnc: A low latency, high framerate screen sharing server for Windows and client for browsers</a> 的grabber方法，并且取得很高的效率。</p>
+<pre><code class="language-c">#ifndef GRABBER_H
+#define GRABBER_H
+
+#define WIN32_LEAN_AND_MEAN
+#include &lt;Windows.h&gt;
+
+typedef struct {
+    int x, y, width, height;
+} grabber_crop_area_t;
+
+typedef struct {
+    HWND window;
+
+    HDC windowDC;
+    HDC memoryDC;
+    HBITMAP bitmap;
+    BITMAPINFOHEADER bitmapInfo;
+
+    int width;
+    int height;
+
+    void *pixels;
+    grabber_crop_area_t crop;
+} grabber_t;
+
+grabber_t *grabber_create(HWND window, grabber_crop_area_t crop);
+void grabber_destroy(grabber_t *self);
+void *grabber_grab(grabber_t *self);
+
+#endif
+</code></pre>
+<p>该实现需要先获取 windows 窗口句柄，然后初始化 grabber</p>
+<pre><code class="language-c++">#include &lt;Windows.h&gt; 
+...
+HWND handle = FindWindow(NULL, TEXT(&quot;Apex Legends&quot;));
+if(!handle) return -1;
+grabber_crop_area_t crop { 0, 0, 0, 0 };
+grabber_t * grabber = grabber_create(handle, crop);
+...
+while(1)
+{
+    void* data = grabber_grab(grabber);
+    ...
+}
+</code></pre>
+<p>这里踩的坑是 void* 是一个字节数组，也就是 uchar* 数组而在  grabber.c 中设置了</p>
+<pre><code class="language-c++">bitmapInfo.biBitCount = 32;
+bitmapInfo.biCompression = BI_RGB;
+</code></pre>
+<p>我们不需要 A 通道数据，所以设置</p>
+<pre><code class="language-c++">bitmapInfo.biBitCount = 24
+</code></pre>
+<p>这意味着要将 grabber 捕获到的数据是 RGB 格式的用 opencv 读取需要格式 CV_8U3C:</p>
+<pre><code class="language-c++">void* pixel = grabber_grab(grabber);
+// 8U3C -&gt; 3 通道每通道 8 位
+cv::Mat frame = cv::Mat(cv::Size{ grabber-&gt;width, grabber-&gt;height }, CV_8UC3);
+frame.data = (uchar*)pixel;
+</code></pre>
+<p>由于opencv 的格式是 BGR，神经网络输入格式是 RGB；将 cv::Mat 转为 ncnn::Mat 时需要进行格式转换：</p>
+<pre><code class="language-c++">ncnn::Mat in = ncnn::Mat::from_pixels_resize(croped.data, ncnn::Mat::PIXEL_BGR2RGB, croped.cols, croped.rows, target_size, target_size);
+</code></pre>
+<p>这里可以直接从 void* 转换到 ncnn::Mat , 为了测试方便还是先转换成 cv::Mat 方便使用 cv::imshow() 显示到窗口。</p>
+<h2 id="识别目标"><strong>识别目标</strong></h2>
+<p><strong>识别目标</strong> 是最重要的一环，也是踩坑最多的一环。神经网络<strong>训练时框架</strong>太笨重，不适合用于软件嵌入，现有的推理框架：</p>
+<ol>
+<li>
+<p>NCNN：腾讯的产品，号称 &quot;<strong>0 依赖</strong>&quot;，运行时确实不需要 .dll 开发时需要 <strong>protobuf</strong>，<strong>vulkan</strong>。在移动平台等边缘设备优化是最好的，很适合用于 嵌入应用.</p>
+</li>
+<li>
+<p>MNN、MACE、TF-lite、Paddle-lite 这些都类似 NCNN 主打移动端推理</p>
+</li>
+<li>
+<p>TensorRT：Nvidia 的框架，一般来说 Nvidia 下用该框架时最快的依赖 <strong>cuda</strong>,<strong>cudann</strong></p>
+<p><a href="https://github.com/Linaom1214/TensorRT-For-YOLO-Series/blob/main/cpp/end2end/main.cpp">TensorRT-For-YOLO-Series/main.cpp at main · Linaom1214/TensorRT-For-YOLO-Series (github.com)</a></p>
+</li>
+<li>
+<p>OpenVINO：Intel家的，缺点很明显不支持 AMD CPU</p>
+</li>
+</ol>
+<p>对于 AI 自瞄来说最好的选择是 NCNN 或者 TensorRT（但是开始这个项目之前没怎么了解过，先后使用了libtorch、OnnxRuntime、NCNN、TensorRT）</p>
+<p>为了方便后续添加功能，例如移动端的实现，采用 <strong>Tensorrt</strong> 和 <strong>NCNN</strong> 两种实现。</p>
+<p>模型使用 最新的 Yolov7， 准确率高，速度快，在不启动游戏的情况下 RTX2060 可以有120fps 的推理速度。</p>
+<p><a href="https://github.com/WongKinYiu/yolov7">GitHub - WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors</a> 给出了模型训练和模型导出的方法，NCNN/TensorRT 的使用可以在 Github 找到大量的Demo，拿到Demo搞清楚输入输出即可。</p>
+<p>这一环最麻烦的是数据格式的转换</p>
+<ul>
+<li>
+<p>BGR -&gt; RGB : 可以由 <code>cv::Mat.convertTo</code>, <code>ncnn::Mat.resize</code> 等方法</p>
+</li>
+<li>
+<p>NHWC -&gt; NCHW: <code>cv::dnn::blobFromImage</code>, <code>transposeND</code>, 三层  for 循环硬转，tensorflow/pytorch 的轴旋转方法</p>
+</li>
+</ul>
+<h2 id="调用track脚本"><strong>调用track脚本</strong></h2>
+<p>这里使用 Python 脚本来处理神经网络的输出和鼠标移动，由于不同的用户需求不同，例如 鼠标平滑，定位精度，拉枪速度，鼠标吸附等，process 方法将在每一个推理帧的最后被调用。</p>
+<pre><code class="language-python">def process(targets) -&gt; (float, float):
+    for target in target:
+        print(target)
+    return (1.1, 2.0)
+</code></pre>
+<p>脚本需要和c++交互，process 方法需要被c++调用并捕获输出值，c++ 调用python需要include Python.h 头文件，需要添加 &lt;python_dir&gt;/libs 库文件， 最后程序打包时需要将 python39.dll 添加到 .exe 文件目录，可以使用更小的 embed 版本来将 python 嵌入到应用（只占用10mb）</p>
+<pre><code class="language-c++">#define PY_SSIZE_T_CLEAN
+#include &lt;Python.h&gt;
+int main() 
+{ 
+    Py_SetPythonHome(std::wstring(config.pythonHome.begin(), config.pythonHome.end()).c_str());
+
+Py_Initialize();//初始化python 
+
+    PyObject *pModule = NULL, *pFunc = NULL, *pArg = NULL; 
+
+    pModule = PyImport_ImportModule(&quot;core&quot;);//引入模块 
+
+    pFunc = PyObject_GetAttrString(pModule, &quot;process&quot;);//直接获取模块中的函数 
+
+    PyObject* list = PyList_New(0);
+    Py_INCREF(list);
+
+    for (auto&amp; obj : boxes)
+    {
+        PyList_Append(list, Py_BuildValue(&quot;(f,f,f,f,f)&quot;, (obj.x1 + obj.x2) / 2, (obj.y1 + obj.y2) / 2, obj.x2 - obj.x1, obj.y2 - obj.y1, obj.score));
+    }
+    PyDict_SetItemString(dict, &quot;target_list&quot;, list);
+    Py_DECREF(list);
+    PyDict_SetItemString(dict, &quot;mouse_left_button&quot;, Py_BuildValue(&quot;b&quot;, KEY_DOWN(VK_LBUTTON)));
+    PyDict_SetItemString(dict, &quot;mouse_middle_button&quot;, Py_BuildValue(&quot;b&quot;, KEY_DOWN(VK_MBUTTON)));
+    PyDict_SetItemString(dict, &quot;mouse_right_button&quot;, Py_BuildValue(&quot;b&quot;, KEY_DOWN(VK_RBUTTON)));
+    PyDict_SetItemString(dict, &quot;mouse_ctrl_button&quot;, Py_BuildValue(&quot;b&quot;, KEY_DOWN(VK_CONTROL)));
+
+    PyObject* args = PyTuple_New(1);
+    PyTuple_SetItem(args, 0, dict);
+
+    PyObject* pRet = PyObject_CallObject(pFunc, args);
+    if (!pRet) return;
+    if (PyErr_Occurred())
+    {
+        PyErr_Print();
+    }
+
+    Py_Finalize(); //释放python 
+
+    return 0; 
+} 
+</code></pre>
+<p>python 端需要获取非激活窗口的键盘或者鼠标状态需要使用pyhook， 但是在 c++ 可以很简单的获得：</p>
+<pre><code class="language-c++">#define KEY_DOWN(VK_NONAME) ((GetAsyncKeyState(VK_NONAME) &amp; 0x8000)
+
+
+KEY_DOWN(VK_LBUTTON);
+KEY_DOWN(VK_MBUTTON);
+KEY_DOWN(VK_RBUTTON);
+KEY_DOWN(VK_CONTROL);
+</code></pre>
+<p>并通过 c++ 传递给 python</p>
+<h2 id="更新准星位置"><strong>更新准星位置</strong></h2>
+<p>参考了这位老哥的鼠标定位方法 <a href="https://www.bilibili.com/read/cv17317767?from=search&amp;spm_id_from=333.337.0.0">FPS游戏（AI自瞄原理） - 哔哩哔哩 (bilibili.com)</a></p>
+<p>但是这里给出的计算方式是有偏差的, 但是利用 <strong>角度替代像素</strong> 是正确的，游戏引擎中相机的角度是使用<a href="https://baike.baidu.com/item/%E6%AC%A7%E6%8B%89%E8%A7%92/1626212?fr=aladdin">欧拉角</a>来计算的, 一般第一人称游戏使用鼠标的 <strong>水平输出</strong>(HorizontalInput) 和</p>
+<p><strong>竖直输出</strong>(VerticalInput) 来控制摄像机转动，这一位置，所以对于不同的游戏 XInput 的大小和相机转动的欧拉角可能不一样，也就是说我们定义一个单位:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">像</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">角</mi><mo>(</mo><mi>f</mi><mi>a</mi><mo>)</mo><mo>=</mo><mi mathvariant="normal">转</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">弧</mi><mi mathvariant="normal">度</mi><mi mathvariant="normal">移</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">像</mi><mi mathvariant="normal">素</mi><mo>(</mo><mi>p</mi><mi>i</mi><mi>x</mi><mi>e</mi><mi>l</mi><mi mathvariant="normal">/</mi><mi>r</mi><mi>a</mi><mi>d</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">像素角(fa) = 转动一弧度移动的像素(pixel/rad)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">像</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">角</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">弧</span><span class="mord cjk_fallback">度</span><span class="mord cjk_fallback">移</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">像</span><span class="mord cjk_fallback">素</span><span class="mopen">(</span><span class="mord mathdefault">p</span><span class="mord mathdefault">i</span><span class="mord mathdefault">x</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mclose">)</span></span></span></span></span></p>
+<p>像素角的计算和测量</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>a</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">游</mi><mi mathvariant="normal">戏</mi><mi mathvariant="normal">水</mi><mi mathvariant="normal">平</mi><mi mathvariant="normal">转</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">周</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">像</mi><mi mathvariant="normal">素</mi><mo>×</mo><mn>2</mn><mo>×</mo><mi>π</mi></mrow><mn>360</mn></mfrac><mo>×</mo><mi mathvariant="normal">游</mi><mi mathvariant="normal">戏</mi><mi mathvariant="normal">内</mi><mi mathvariant="normal">灵</mi><mi mathvariant="normal">敏</mi><mi mathvariant="normal">度</mi><mo>×</mo><mi>A</mi><mi>D</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">fa = \frac{游戏水平转动一周需要的像素\times 2 \times \pi}{360} \times 游戏内灵敏度  \times ADS
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span><span class="mord">6</span><span class="mord">0</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">游</span><span class="mord cjk_fallback">戏</span><span class="mord cjk_fallback">水</span><span class="mord cjk_fallback">平</span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">周</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">像</span><span class="mord cjk_fallback">素</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">游</span><span class="mord cjk_fallback">戏</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">灵</span><span class="mord cjk_fallback">敏</span><span class="mord cjk_fallback">度</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span></span></p>
+<p>所以只需要测量游戏内水平转动一周需要移动的像素即可(游戏内瞄准一个点不断地改变pixel 的值，直到相机画面不会抖一下)，不同倍镜下的 fa 值是不同的需要单独测量。</p>
+<pre><code class="language-python">import win32api
+import win32con
+pixel = 10909
+for i in range(pixel)
+{
+    win32api.mouse_event(xxx, 1, 0, 0, 0)
+}
+</code></pre>
+<p>现在有了 fa 的值之后，再来计算如何将鼠标移动到频幕上的点 Point(x, y), 首先计算目标点和屏幕某点 P 的偏移向量 offset(x, y)但是，真实的移动是发生在游戏空间的 3D 世界。</p>
+<p><img src="https://xuaii.github.io/post-images/1664242533685.png" alt="" loading="lazy"><br>
+也就是需要将视角方向从OB 调整到OG方向，借鉴 <a href="https://www.bilibili.com/read/cv17317767?from=search&amp;spm_id_from=333.337.0.0">水平像素转角度</a>方法可以先将视线 OB 调整到 OC，再从OC调整到OG，这个过程中 相机到视平面的距离是不变的。<br>
+<img src="https://xuaii.github.io/post-images/1664244877946.png" alt="" loading="lazy"><br>
+为了保持距离不变，所以是先从 OB -&gt; OI -&gt; OK，所以将三维的转动过程转化为两次二维的转动</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mn>2</mn><mi>s</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>n</mi><mo>=</mo><mi>A</mi><mi>B</mi><mo>=</mo><mfrac><mrow><mi>h</mi><mi>a</mi><mi>l</mi><mi>f</mi><mi mathvariant="normal">_</mi><mi>s</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>n</mi><mi mathvariant="normal">_</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi></mrow><mrow><mi>tan</mi><mo>⁡</mo><mfrac><mrow><mi>f</mi><mi>o</mi><mi>v</mi></mrow><mn>2</mn></mfrac></mrow></mfrac><mspace linebreak="newline"></mspace><mspace width="1em"/><mspace linebreak="newline"></mspace><mspace width="1em"/><mspace linebreak="newline"></mspace><msub><mi>θ</mi><mi>x</mi></msub><mo>=</mo><mi mathvariant="normal">∠</mi><mrow><mi>B</mi><mi>A</mi><mi>I</mi></mrow><mo>=</mo><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mi>B</mi><mi>C</mi></mrow><mrow><mi>A</mi><mi>B</mi></mrow></mfrac><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><msub><mi>t</mi><mi>x</mi></msub></mrow><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mn>2</mn><mi>s</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>n</mi></mrow></mfrac><mspace width="1em"/><mspace linebreak="newline"></mspace><mspace width="1em"/><mspace linebreak="newline"></mspace><mspace width="1em"/><mspace linebreak="newline"></mspace><mspace width="1em"/><mspace linebreak="newline"></mspace><msub><mi>θ</mi><mi>y</mi></msub><mo>=</mo><mi mathvariant="normal">∠</mi><mrow><mi>C</mi><mi>A</mi><mi>G</mi></mrow><mo>=</mo><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mi>C</mi><mi>G</mi></mrow><mrow><mi>A</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mi>C</mi><mi>G</mi></mrow><msqrt><mrow><mi>A</mi><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><mi>B</mi><msup><mi>C</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo>=</mo><mi>arctan</mi><mo>⁡</mo><mfrac><mrow><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><msub><mi>t</mi><mi>y</mi></msub></mrow><msqrt><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mn>2</mn><mi>s</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>e</mi><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><msubsup><mi>t</mi><mi>x</mi><mn>2</mn></msubsup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">dis2screen = AB = \frac{half\_screen\_width}{\tan{\frac{fov}{2}}} \\
+\quad\\
+ \quad\\
+
+\theta_x = \angle{BAI} =  \arctan{\frac{BC}{AB}} \arctan{\frac{offset_x}{dis2screen}}
+ \quad\\
+ \quad\\
+ \quad\\
+ \quad\\
+\theta_y = \angle{CAG} = \arctan{\frac{CG}{AC}} = \arctan{\frac{CG}{\sqrt{AB^2+BC^2}}} = \arctan{\frac{offset_y}{\sqrt{dis2screen^2 + offset_x^2}}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">2</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5616559999999997em;vertical-align:-1.1672159999999998em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.39444em;"><span style="top:-2.177784em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">tan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6999999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1672159999999998em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69224em;vertical-align:0em;"></span><span class="mord">∠</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.0574399999999997em;vertical-align:-0.686em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714399999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">2</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69224em;vertical-align:0em;"></span><span class="mord">∠</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span><span class="mord mathdefault">G</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.29033em;vertical-align:-0.93em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.196611em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.913389em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">A</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.873389em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.12661100000000003em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5014399999999997em;vertical-align:-1.13em;"></span><span class="mop">arctan</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.178446em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.931554em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">2</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.891554em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119c34,79.3,68.167,
+158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
+c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
+175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
+c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
+-252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
+s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.308446em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.13em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p>
+<p>这样就得到了两个方向的偏转角<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>θ</mi><mi>x</mi></msub><mo separator="true">,</mo><msub><mi>θ</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(\theta_x, \theta_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，所以根据之前测量得到的 fa 值，可以得到鼠标的像素偏移值：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>i</mi><mi>x</mi><mi>e</mi><msub><mi>l</mi><mi>i</mi></msub><mo>=</mo><msub><mi>θ</mi><mi>i</mi></msub><mo>×</mo><mfrac><mrow><mi>f</mi><mi>a</mi></mrow><mrow><mi mathvariant="normal">游</mi><mi mathvariant="normal">戏</mi><mi mathvariant="normal">内</mi><mi mathvariant="normal">灵</mi><mi mathvariant="normal">敏</mi><mi mathvariant="normal">度</mi><mo>×</mo><mi>F</mi><mi>O</mi><mi>V</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">pixel_i = \theta_i \times \frac{fa}{游戏内灵敏度\times FOV}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">i</span><span class="mord mathdefault">x</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.14077em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714399999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">游</span><span class="mord cjk_fallback">戏</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">灵</span><span class="mord cjk_fallback">敏</span><span class="mord cjk_fallback">度</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>所以就可以由屏幕偏移量 offset 得到鼠标偏移量 pixel， 此外需要能够移动鼠标的方法，在 python 环境下，常规的自动化库方法都是无效的，鼠标驱动层的移动应该是有效的但是麻烦，win32api 也是有效的，不过需要以管理员权限启动程序。</p>
+<pre><code class="language-python">import win32api
+import win32con
+win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(pixel_x), int(pixel_y), 0, 0)
+</code></pre>
+<h2 id="使用-json-读取配置">使用 Json 读取配置</h2>
+<p>使用简单又方便的 <a href="https://github.com/nlohmann/json">nlohmann/json: JSON for Modern C++ (github.com)</a>，只有 .hpp 头文件</p>
+<pre><code class="language-c">std::cout &lt;&lt; &quot;# init config ...&quot; &lt;&lt; std::endl;
+// ----------------------- config -----------------------
+std::ifstream f = std::ifstream();
+json json_data;;
+Config config;
+// 需要根据当前运行环境构造文件全名
+try {
+    f.open(&quot;./config.json&quot;);
+    json_data = json::parse(f);
+    std::cout &lt;&lt; &quot;[init] load config from: &quot; &lt;&lt; &quot;config.json&quot; &lt;&lt; std::endl;
+    config.windowName = json_data[&quot;windowName&quot;];
+    config.classNamesPath = json_data[&quot;classNamesPath&quot;];        config.pythonHome = json_data[&quot;pythonHome&quot;];
+    config.debug = json_data[&quot;debug&quot;];
+    config.detectorName = json_data[&quot;detectorName&quot;];
+    config.paramPath = json_data[&quot;paramPath&quot;];
+    config.binPath = json_data[&quot;binPath&quot;];
+    config.boxThreshold = json_data[&quot;boxThreshold&quot;];
+    config.nmsThreshold = json_data[&quot;nmsThreshold&quot;];
+    config.useGPU = true;
+    config.mouseMovementDelay = json_data[&quot;mouseMovementDelay&quot;];
+    config.receptiveField = json_data[&quot;receptiveField&quot;];
+}
+catch (std::exception&amp; e) {
+    std::cout &lt;&lt; &quot;配置文件读取失败&quot; &lt;&lt; std::endl;
+    return -1;
+}
+</code></pre>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Island and Winds<br>永久链接:
+                                    <a href="https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/" title="[AI] Auxiliary positioning and tracker">
+                                        https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                        <div class="nearby-article-left" style="padding: 10px;">
+                            <a class="prev" rel="prev" href="https://xuaii.github.io/post/zhuan-zai-cduo-xian-cheng-diao-yong-python/">
+                                <i class="fa fa-chevron-left"></i>
+                                [转载] c++多线程调用python
+                            </a>
+                        </div>
+                        
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://xuaii.github.io/post/godot-geometry/">
+                                        [Godot] Geometry 对象使用<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/&sharesource=qzone&title=[AI] Auxiliary positioning and tracker&pics=https://xuaii.github.io/images/avatar.png?v=1667771736332&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/&sharesource=weibo&title=[AI] Auxiliary positioning and tracker + " - " + &pic="https://xuaii.github.io/images/avatar.png?v=1667771736332"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'CYFKzMa2Qb2WGxCgVV2PLhit-gzGzoHsz',
+        appKey: 'NafP7wLckvLJOXjRfRJ6SV7C',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷idea',
+                                        url: 'https://xuaii.github.io/tag/RH8VFDFV9/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷优化',
+                                        url: 'https://xuaii.github.io/tag/3u8paddqN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷关卡设计',
+                                        url: 'https://xuaii.github.io/tag/4wlI74y2BW/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Godot',
+                                        url: 'https://xuaii.github.io/tag/n-3KDzmbKR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计算机组成原理',
+                                        url: 'https://xuaii.github.io/tag/q7ogHTpxn/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷CPU',
+                                        url: 'https://xuaii.github.io/tag/nk7eMi6weI/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷指令集',
+                                        url: 'https://xuaii.github.io/tag/y0QD2lmwzR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷我的世界',
+                                        url: 'https://xuaii.github.io/tag/Oe6pf-JNw/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编译原理',
+                                        url: 'https://xuaii.github.io/tag/-xYITLanXJ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷自动化',
+                                        url: 'https://xuaii.github.io/tag/QU-T8fr1fk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷挖坑',
+                                        url: 'https://xuaii.github.io/tag/aYIh6YBFp/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷摘抄',
+                                        url: 'https://xuaii.github.io/tag/aMOS10oo8/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷c++',
+                                        url: 'https://xuaii.github.io/tag/z4Tg_U8wV/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷反射',
+                                        url: 'https://xuaii.github.io/tag/S6muC6Uh7u/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷godot',
+                                        url: 'https://xuaii.github.io/tag/Dqmvh-Mfk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编辑器插件',
+                                        url: 'https://xuaii.github.io/tag/2btgH2JlXq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏开发',
+                                        url: 'https://xuaii.github.io/tag/jy5L0E1G3/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷总结',
+                                        url: 'https://xuaii.github.io/tag/qmCbMC82l_/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷决策树',
+                                        url: 'https://xuaii.github.io/tag/zPTyWgNBT/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷机器学习',
+                                        url: 'https://xuaii.github.io/tag/cJZOT8XITZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷线性模型',
+                                        url: 'https://xuaii.github.io/tag/49U0AO548/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷神经网络',
+                                        url: 'https://xuaii.github.io/tag/YsZNZqLqv/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷SVM',
+                                        url: 'https://xuaii.github.io/tag/TUnAlz6DG/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷转载',
+                                        url: 'https://xuaii.github.io/tag/QvoiM26MU/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '马里奥-Ground',
+                                        url: 'http://music.163.com/song/media/outer/url?id=31719143.mp3',
+                                        artist: '',
+                                        cover: 'http://p2.music.126.net/CSH0Y-N4RWqCNmJBt3yT-Q==/19211766672383482.jpg?param=50y50',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                                <a target="_blank" href="https://pages.github.com/" title="">Powered by Github Pages</a>
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

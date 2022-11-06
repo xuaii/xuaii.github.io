@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1667771736332">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<!-- use my domain directly -->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<!-- <script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" /> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<!-- 添加的关于 markdown 内容 -->
+<!-- <script src=https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js></script>
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                算法学习列表
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/suan-fa-xue-xi-lie-biao/" class="leancloud_visitors" data-flag-title="算法学习列表">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            9.6分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Island and Winds" src="https://xuaii.github.io/images/avatar.png?v=1667771736332" srcset="https://xuaii.github.io/images/avatar.png?v=1667771736332" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://xuaii.github.io" title="由Island and Winds发布" rel="author">Island and Winds<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-09-11</span>
+                                        </div>
+                        </header>
+                        
+
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p><strong>参考列表</strong><br>
+<a href="https://github.com/williamfiset/Algorithms">Wialliam Fiset's Algorithms</a><br>
+<a href="https://github.com/keon/algorithms">Keon's Algorithms</a><br>
+<a href="https://github.com/xtaci/algorithms">Xtaci's Algorithms</a><br>
+<a href="https://github.com/labuladong/fucking-algorithm">Labuladong's Fucking-Algorithms</a><br>
+<a href="https://github.com/geekxh/hello-algorithm">Geekxh's Hello-Algorithms</a><br>
+<a href="https://github.com/algorithm-visualizer/algorithm-visualizer">Algorithm-Visualizer</a><br>
+<a href="https://github.com/justjavac/free-programming-books-zh_CN">Justjavac's Free-Programming-Books</a><br>
+<a href="https://github.com/imarvinle/awesome-cs-books">Imarvinle's Awesome-CS-Books</a><br>
+<a href="http://jeffe.cs.illinois.edu/teaching/algorithms/">Jeffe's Algorithms Course</a></p>
+<p>主要关注其中 <strong>操作系统</strong>、<strong>算法</strong>、<strong>图形学</strong>、<strong>设计模式</strong>、<strong>游戏引擎</strong>、<strong>C#</strong>、 <strong>C/C++</strong> 、<strong>编译器中间语言</strong>、<strong>元编程</strong></p>
+<p><a href="http://jeffe.cs.illinois.edu/teaching/algorithms/">Jeffe's Crouse</a> 用于<strong>学习</strong>，<a href="https://github.com/williamfiset/Algorithms">Wialliam Fiset's Algorithms</a>, <a href="https://github.com/keon/algorithms">Keon's Algorithms</a>, <a href="https://github.com/xtaci/algorithms">Xtaci's Algorithms</a> 用于<strong>拓展补充</strong>，<a href="https://github.com/labuladong/fucking-algorithm">labuladong 的算法小抄</a>,  <a href="https://www.geekxh.com/">小浩算法</a> 用于<strong>练习</strong></p>
+<p>这是一个利用<strong>空闲时间学习</strong>的<strong>长期计划</strong>，或许需要几年时间，学不完没关系，学一点赚一点，加油！</p>
+<h2 id="数据结构">数据结构</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7329676"><label class="task-list-item-label" for="task-item-7329676"> Balance Trees</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4461955"><label class="task-list-item-label" for="task-item-4461955"> AVL Tree (recursive)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3512024"><label class="task-list-item-label" for="task-item-3512024"> Red Black Tree (recursive)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5815544"><label class="task-list-item-label" for="task-item-5815544"> Binary Search Tree</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2546339"><label class="task-list-item-label" for="task-item-2546339"> Splay Tree</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2863399"><label class="task-list-item-label" for="task-item-2863399"> Dynamic Array</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6116023"><label class="task-list-item-label" for="task-item-6116023"> Dynamic Array (integer only, fast)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6164115"><label class="task-list-item-label" for="task-item-6164115"> Fenwick Tree</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3919965"><label class="task-list-item-label" for="task-item-3919965"> Fenwick Tree (range query, point update)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8289416"><label class="task-list-item-label" for="task-item-8289416"> (range update, point query)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1330167"><label class="task-list-item-label" for="task-item-1330167"> Fibonacci Heap</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6072128"><label class="task-list-item-label" for="task-item-6072128"> Hashtable</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6382209"><label class="task-list-item-label" for="task-item-6382209"> Hashtable (double hashing)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5004627"><label class="task-list-item-label" for="task-item-5004627"> Hashtable (linear probing)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5357722"><label class="task-list-item-label" for="task-item-5357722"> Hashtable (quadratic probing)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5862030"><label class="task-list-item-label" for="task-item-5862030"> Hashtable (sparate chaning)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6819225"><label class="task-list-item-label" for="task-item-6819225"> Linked List</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7725417"><label class="task-list-item-label" for="task-item-7725417"> Priority Queue</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-651459"><label class="task-list-item-label" for="task-item-651459"> Min Binary Heap</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5872865"><label class="task-list-item-label" for="task-item-5872865"> Min Indexed Binary Heap (sorted key-value pairs, similar to hash-table)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4143477"><label class="task-list-item-label" for="task-item-4143477"> Min D-Heap</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6620711"><label class="task-list-item-label" for="task-item-6620711"> Min Indexed D-Heap (sorted key-value pairs, similar to hash table)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4289996"><label class="task-list-item-label" for="task-item-4289996"> Queue</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-529871"><label class="task-list-item-label" for="task-item-529871"> Queue (integer only, fixed size, fast)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4213535"><label class="task-list-item-label" for="task-item-4213535"> Queue (linked list, generic)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5692257"><label class="task-list-item-label" for="task-item-5692257"> Segment Tree</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2762634"><label class="task-list-item-label" for="task-item-2762634"> Segement Tree (array based, compact)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2052508"><label class="task-list-item-label" for="task-item-2052508"> Segment Tree (linked list generic)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2669042"><label class="task-list-item-label" for="task-item-2669042"> Sparse Table</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8679134"><label class="task-list-item-label" for="task-item-8679134"> Stack</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9279901"><label class="task-list-item-label" for="task-item-9279901"> Stack (integer only, fixed size, fast)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5269672"><label class="task-list-item-label" for="task-item-5269672"> Stack (linked list, generic)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8780780"><label class="task-list-item-label" for="task-item-8780780"> Stack (array, generic)</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9447888"><label class="task-list-item-label" for="task-item-9447888"> Suffix Array</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4805770"><label class="task-list-item-label" for="task-item-4805770"> Suffix Array (O(n^2logn))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8994597"><label class="task-list-item-label" for="task-item-8994597"> Suffix Array (O(nlog^2(n))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6581331"><label class="task-list-item-label" for="task-item-6581331"> Suffix Array (O(nlogn))</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-781488"><label class="task-list-item-label" for="task-item-781488"> Trie</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-952866"><label class="task-list-item-label" for="task-item-952866"> Union Find</label></li>
+</ul>
+<h2 id="数组">数组</h2>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/shuffle.h">Array shuffle</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/2darray.h">2D Array</a></p>
+<h2 id="动态编程">动态编程</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8002609"><label class="task-list-item-label" for="task-item-8002609"> Coin change problem</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9651541"><label class="task-list-item-label" for="task-item-9651541"> Edit distance (iterative)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6943849"><label class="task-list-item-label" for="task-item-6943849"> Edit distance (recursive)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3734932"><label class="task-list-item-label" for="task-item-3734932"> Knapsack 0/1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2434571"><label class="task-list-item-label" for="task-item-2434571"> Knapsack unbounded (0/inf)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-391369"><label class="task-list-item-label" for="task-item-391369"> Maximum contiguous subarray</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8338600"><label class="task-list-item-label" for="task-item-8338600"> Longest Common Subsequence (LCS)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-641939"><label class="task-list-item-label" for="task-item-641939"> Longest Increasing Subsequence (LIS)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1841951"><label class="task-list-item-label" for="task-item-1841951"> Longest Palindrome Subsequence (LPS)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1429581"><label class="task-list-item-label" for="task-item-1429581">  Traveling Salesman Problem (dynamic programming, iterative)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2968024"><label class="task-list-item-label" for="task-item-2968024">  Traveling Salesman Problem (dynamic programming, recursive)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5817533"><label class="task-list-item-label" for="task-item-5817533">  Minimum Weight Perfect Matching (iterative, complete graph)</label></li>
+</ul>
+<p>Examples:</p>
+<h3 id="adhoc">Adhoc</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8042806"><label class="task-list-item-label" for="task-item-8042806">  Magic Cows</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-323814"><label class="task-list-item-label" for="task-item-323814">  Narrow Art Gallery</label></li>
+</ul>
+<h3 id="tiling-problems">Tiling problems</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2759931"><label class="task-list-item-label" for="task-item-2759931"> Tiling Dominoes</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7476798"><label class="task-list-item-label" for="task-item-7476798"> Tiling Dominoes and Trominoes</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3285948"><label class="task-list-item-label" for="task-item-3285948"> Mountain Scenes</label></li>
+</ul>
+<h2 id="计算几何">计算几何</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2472723"><label class="task-list-item-label" for="task-item-2472723"> Angle between 2D vectors - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3343962"><label class="task-list-item-label" for="task-item-3343962"> Angle between 3D vectors - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3946849"><label class="task-list-item-label" for="task-item-3946849"> Circle-circle intersection point(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4833537"><label class="task-list-item-label" for="task-item-4833537"> Circle-line intersection point(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7959469"><label class="task-list-item-label" for="task-item-7959469"> Circle-line segment intersection point(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7343465"><label class="task-list-item-label" for="task-item-7343465"> Circle-point tangent line(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4993088"><label class="task-list-item-label" for="task-item-4993088"> Closest pair of points (line sweeping algorithm) - O(nlog(n))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6348510"><label class="task-list-item-label" for="task-item-6348510"> Collinear points test (are three 2D points on the same line) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-175448"><label class="task-list-item-label" for="task-item-175448"> Convex hull (Graham Scan algorithm) - O(nlog(n))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6787025"><label class="task-list-item-label" for="task-item-6787025"> Convex hull (Monotone chain algorithm) - O(nlog(n))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2115852"><label class="task-list-item-label" for="task-item-2115852"> Convex polygon area - O(n)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7960468"><label class="task-list-item-label" for="task-item-7960468"> Convex polygon cut - O(n)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5376672"><label class="task-list-item-label" for="task-item-5376672"> Convex polygon contains points - O(log(n))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2619603"><label class="task-list-item-label" for="task-item-2619603"> Coplanar points test (are four 3D points on the same plane) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7848767"><label class="task-list-item-label" for="task-item-7848767"> Line class (handy infinite line class) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1122822"><label class="task-list-item-label" for="task-item-1122822"> Line-circle intersection point(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4381747"><label class="task-list-item-label" for="task-item-4381747"> Line segment-circle intersection point(s) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2700178"><label class="task-list-item-label" for="task-item-2700178"> Line segment to general form (ax + by = c) - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9396445"><label class="task-list-item-label" for="task-item-9396445"> Line segment-line segment intersection - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7347400"><label class="task-list-item-label" for="task-item-7347400"> Longitude-Latitude geographic distance - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5992047"><label class="task-list-item-label" for="task-item-5992047"> Point is inside triangle check - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5340559"><label class="task-list-item-label" for="task-item-5340559"> Point rotation about point - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5087873"><label class="task-list-item-label" for="task-item-5087873"> Triangle area algorithms - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8631707"><label class="task-list-item-label" for="task-item-8631707"> [UNTESTED] Circle-circle intersection area - O(1)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6869707"><label class="task-list-item-label" for="task-item-6869707"> [UNTESTED] Circular segment area - O(1)</label></li>
+</ul>
+<h2 id="图论">图论</h2>
+<p><strong>Tree algorithms</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1140654"><label class="task-list-item-label" for="task-item-1140654"> 🎥 Rooting an undirected tree - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6206286"><label class="task-list-item-label" for="task-item-6206286"> 🎥 Identifying isomorphic trees - O(?)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8386421"><label class="task-list-item-label" for="task-item-8386421"> 🎥 Tree center(s) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1212182"><label class="task-list-item-label" for="task-item-1212182"> Tree diameter - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8567628"> 🎥 Lowest Common Ancestor (LCA, Euler tour) - O(1) queries, O(nlogn) preprocessing<br>
+<strong>Network flow</strong><label class="task-list-item-label" for="task-item-8567628"> 🎥 Lowest Common Ancestor (LCA, Euler tour) - O(1) queries, O(nlogn) preprocessing
+**Network flow**</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9896085"><label class="task-list-item-label" for="task-item-9896085"> Bipartite graph verification (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4026853"><label class="task-list-item-label" for="task-item-4026853"> 🎥 Max flow & Min cut (Ford-Fulkerson with DFS, adjacency list) - O(fE)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2433225"><label class="task-list-item-label" for="task-item-2433225"> Max flow & Min cut (Ford-Fulkerson with DFS, adjacency matrix) - O(fV2)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8550944"><label class="task-list-item-label" for="task-item-8550944"> 🎥 Max flow & Min cut (Edmonds-Karp, adjacency list) - O(VE2)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-283690"><label class="task-list-item-label" for="task-item-283690"> 🎥 Max flow & Min cut (Capacity scaling, adjacency list) - O(E2log2(U))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5942704"><label class="task-list-item-label" for="task-item-5942704"> 🎥 Max flow & Min cut (Dinic's, adjacency list) - O(EV2) or O(E√V) for</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5486768"><label class="task-list-item-label" for="task-item-5486768"> bipartite graphs</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8185758"><label class="task-list-item-label" for="task-item-8185758"> Maximum Cardinality Bipartite Matching (augmenting path algorithm, adjacency list) - O(VE)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6591551"><label class="task-list-item-label" for="task-item-6591551"> Min Cost Max Flow (Bellman-Ford, adjacency list) - O(E2V2)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1745824"> Min Cost Max Flow (Johnson's algorithm, adjacency list) - O(E2Vlog(V))<br>
+<strong>Main graph theory algorithms</strong><label class="task-list-item-label" for="task-item-1745824"> Min Cost Max Flow (Johnson's algorithm, adjacency list) - O(E2Vlog(V))
+**Main graph theory algorithms**</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2311144"><label class="task-list-item-label" for="task-item-2311144"> Articulation points/cut vertices (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7225527"><label class="task-list-item-label" for="task-item-7225527"> Bellman-Ford (edge list, negative cycles, fast & optimized) - O(VE)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8033931"><label class="task-list-item-label" for="task-item-8033931"> 🎥 Bellman-Ford (adjacency list, negative cycles) - O(VE)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1359652"><label class="task-list-item-label" for="task-item-1359652"> Bellman-Ford (adjacency matrix, negative cycles) - O(V3)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9011098"><label class="task-list-item-label" for="task-item-9011098"> 🎥 Breadth first search (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9036761"><label class="task-list-item-label" for="task-item-9036761"> Breadth first search (adjacency list, fast queue) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1078196"><label class="task-list-item-label" for="task-item-1078196"> Bridges/cut edges (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4007900"><label class="task-list-item-label" for="task-item-4007900"> Find connected components (adjacency list, union find) - O(Elog(E))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8516190"><label class="task-list-item-label" for="task-item-8516190"> Find connected components (adjacency list, DFS) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4996287"><label class="task-list-item-label" for="task-item-4996287"> Depth first search (adjacency list, iterative) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7714132"><label class="task-list-item-label" for="task-item-7714132"> Depth first search (adjacency list, iterative, fast stack) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-933289"><label class="task-list-item-label" for="task-item-933289"> 🎥 Depth first search (adjacency list, recursive) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2411674"><label class="task-list-item-label" for="task-item-2411674"> 🎥 Dijkstra's shortest path (adjacency list, lazy implementation) - O(Elog(V))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2480950"><label class="task-list-item-label" for="task-item-2480950"> 🎥 Dijkstra's shortest path (adjacency list, eager implementation + D-ary heap) - O(ElogE/V(V))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5683690"><label class="task-list-item-label" for="task-item-5683690"> 🎥 Eulerian Path (directed edges) - O(E+V)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5888461"><label class="task-list-item-label" for="task-item-5888461"> 🎥 Floyd Warshall algorithm (adjacency matrix, negative cycle check) - O(V3)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3021973"><label class="task-list-item-label" for="task-item-3021973"> Graph diameter (adjacency list) - O(VE)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3597446"><label class="task-list-item-label" for="task-item-3597446"> 🎥 Kahn's algorithm (topological sort, adjacency list) - O(E+V)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6916539"><label class="task-list-item-label" for="task-item-6916539"> Kruskal's min spanning tree algorithm (edge list, union find) - O(Elog(E))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2406016"><label class="task-list-item-label" for="task-item-2406016"> 🎥 Kruskal's min spanning tree algorithm (edge list, union find, lazy sorting) - O(Elog(E))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7964983"><label class="task-list-item-label" for="task-item-7964983"> Kosaraju's strongly connected components algorithm (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-528691"><label class="task-list-item-label" for="task-item-528691"> 🎥 Prim's min spanning tree algorithm (lazy version, adjacency list) - O(Elog(E))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3784894"><label class="task-list-item-label" for="task-item-3784894"> Prim's min spanning tree algorithm (lazy version, adjacency matrix) - O(V2)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6546195"><label class="task-list-item-label" for="task-item-6546195"> 🎥 Prim's min spanning tree algorithm (eager version, adjacency list) - O(Elog(V))</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-811563"><label class="task-list-item-label" for="task-item-811563"> Steiner tree (minimum spanning tree generalization) - O(V3 + V2 _ 2T + V _ 3T)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-387698"><label class="task-list-item-label" for="task-item-387698"> 🎥 Tarjan's strongly connected components algorithm (adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-75868"><label class="task-list-item-label" for="task-item-75868"> 🎥 Topological sort (acyclic graph, adjacency list) - O(V+E)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1183857"><label class="task-list-item-label" for="task-item-1183857"> Topological sort (acyclic graph, adjacency matrix) - O(V2)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3119404"><label class="task-list-item-label" for="task-item-3119404"> Traveling Salesman Problem (brute force) - O(n!)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8104702"><label class="task-list-item-label" for="task-item-8104702"> 🎥 Traveling Salesman Problem (dynamic programming, iterative) - O(n22n)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8223995"><label class="task-list-item-label" for="task-item-8223995"> Traveling Salesman Problem (dynamic programming, recursive) - O(n22n)</label></li>
+</ul>
+<h2 id="线性代数">线性代数</h2>
+<p>Freivald's algorithm (matrix multiplication verification) - O(kn2)<br>
+Gaussian elimination (solve system of linear equations) - O(cr2)<br>
+Gaussian elimination (modular version, prime finite field) - O(cr2)<br>
+Linear recurrence solver (finds nth term in a recurrence relation) - O(m3log(n))<br>
+Matrix determinant (Laplace/cofactor expansion) - O((n+2)!)<br>
+Matrix inverse - O(n3)<br>
+Matrix multiplication - O(n3)<br>
+Matrix power - O(n3log(p))<br>
+Square matrix rotation - O(n2)</p>
+<h2 id="数学">数学</h2>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/integer.h">Arbitrary Integer</a><br>
+[UNTESTED] Chinese remainder theorem<br>
+Prime number sieve (sieve of Eratosthenes) - O(nlog(log(n)))<br>
+Prime number sieve (sieve of Eratosthenes, compressed) - O(nlog(log(n)))<br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/prime.h">Prime test(trial division)</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/prime.h">Prime test(Miller-Rabin's method)</a><br>
+Totient function (phi function, relatively prime number count) - O(n1/4)<br>
+Totient function using sieve (phi function, relatively prime number count) - O(nlog(log(n)))<br>
+Extended euclidean algorithm - ~O(log(a + b))<br>
+Greatest Common Divisor (GCD) - ~O(log(a + b))<br>
+Fast Fourier transform (quick polynomial multiplication) - O(nlog(n))<br>
+Fast Fourier transform (quick polynomial multiplication, complex numbers) - O(nlog(n))<br>
+Primality check - O(√n)<br>
+Primality check (Rabin-Miller) - O(k)<br>
+Least Common Multiple (LCM) - ~O(log(a + b))<br>
+Modular inverse - ~O(log(a + b))<br>
+Prime factorization (pollard rho) - O(n1/4)<br>
+Relatively prime check (coprimality check) - ~O(log(a + b))</p>
+<h2 id="搜索算法">搜索算法</h2>
+<p>Binary search (real numbers) - O(log(n))<br>
+Interpolation search (discrete discrete) - O(n) or O(log(log(n))) with uniform input<br>
+Ternary search (real numbers) - O(log(n))<br>
+Ternary search (discrete numbers) - O(log(n))</p>
+<h2 id="排序算法">排序算法</h2>
+<p>Bubble sort - O(n2)<br>
+Bucket sort - Θ(n + k)<br>
+Counting sort - O(n + k)<br>
+Heapsort - O(nlog(n))<br>
+Insertion sort - O(n2)<br>
+Mergesort - O(nlog(n))<br>
+Quicksort (in-place, Hoare partitioning) - Θ(nlog(n))<br>
+Quicksort3 (Dutch National Flag algorithm) - Θ(nlog(n))<br>
+Selection sort - O(n2)<br>
+Radix sort - O(n*w)</p>
+<h2 id="字符串算法">字符串算法</h2>
+<p>Booth's algorithm (finds lexicographically smallest string rotation) - O(n)<br>
+Knuth-Morris-Pratt algorithm (finds pattern matches in text) - O(n+m)<br>
+Longest Common Prefix (LCP) array - O(nlog(n)) bounded by SA construction, otherwise O(n)<br>
+🎥 Longest Common Substring (LCS) - O(nlog(n)) bounded by SA construction, otherwise O(n)<br>
+🎥 Longest Repeated Substring (LRS) - O(nlog(n))<br>
+Manacher's algorithm (finds all palindromes in text) - O(n)<br>
+Rabin-Karp algorithm (finds pattern match positions in text) - O(n+m)<br>
+Substring verification with suffix array - O(nlog(n)) SA construction and O(mlog(n)) per query</p>
+<h2 id="其他">其他</h2>
+<p>Bit manipulations - O(1)<br>
+List permutations - O(n!)<br>
+🎥 Power set (set of all subsets) - O(2n)<br>
+Set combinations - O(n choose r)<br>
+Set combinations with repetition - O((n+r-1) choose r)<br>
+Sliding Window Minimum/Maximum - O(1)<br>
+Square Root Decomposition - O(1) point updates, O(√n) range queries<br>
+Unique set combinations - O(n choose r)<br>
+Lazy Range Adder - O(1) range updates, O(n) to finalize all updates<br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/random.h">Linear congruential generator</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/max_subarray.h">Maximum subarray problem</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/bitset.h">Bit-Set</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/double_linked_list.h">Double linked list</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/skiplist.h">Skip list</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/dos_tree.h">Dynamic order statistics</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/interval_tree.h">Interval tree</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/trie.h">Prefix Tree(Trie)</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/suffix_tree.h">Suffix Tree</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/btree.h">B-Tree</a></p>
+<h4 id="hash">hash</h4>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/hash_multi.h">Hash by multiplication</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/hash_table.h">Hash table</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/universal_hash.h">Universal hash function</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/perfect_hash.h">Perfect hash</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/hash_string.h">Java's string hash</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/hash_string.h">FNV-1a string hash</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/simhash.h">SimHash</a></p>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/bloom_filter.h">Bloom Filter</a></p>
+<h4 id="密码学">密码学</h4>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/sha1.h">SHA-1 Message Digest Algorithm</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/md5.h">MD5</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/base64.h">Base64</a></p>
+<p><a href="https://github.com/xtaci/algorithms/blob/master/include/relabel_to_front.h">Push–Relabel algorithm</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/huffman.h">Huffman Coding</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/word_seg.h">Word segementation</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/astar.h">A* algorithm</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/k-means.h">K-Means</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/kmp.h">Knuth–Morris–Pratt algorithm</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/disjoint-set.h">Disjoint-Set</a><br>
+<a href="https://github.com/xtaci/algorithms/blob/master/include/8queen.h">8-Queen Problem</a></p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Island and Winds<br>永久链接:
+                                    <a href="https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/" title="算法学习列表">
+                                        https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                        <div class="nearby-article-left" style="padding: 10px;">
+                            <a class="prev" rel="prev" href="https://xuaii.github.io/post/godot-geometry/">
+                                <i class="fa fa-chevron-left"></i>
+                                [Godot] Geometry 对象使用
+                            </a>
+                        </div>
+                        
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://xuaii.github.io/post/c-10-xin-te-xing/">
+                                        C# 10 新特性<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/&sharesource=qzone&title=算法学习列表&pics=https://xuaii.github.io/images/avatar.png?v=1667771736332&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/&sharesource=weibo&title=算法学习列表 + " - " + &pic="https://xuaii.github.io/images/avatar.png?v=1667771736332"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'CYFKzMa2Qb2WGxCgVV2PLhit-gzGzoHsz',
+        appKey: 'NafP7wLckvLJOXjRfRJ6SV7C',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷idea',
+                                        url: 'https://xuaii.github.io/tag/RH8VFDFV9/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷优化',
+                                        url: 'https://xuaii.github.io/tag/3u8paddqN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷关卡设计',
+                                        url: 'https://xuaii.github.io/tag/4wlI74y2BW/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Godot',
+                                        url: 'https://xuaii.github.io/tag/n-3KDzmbKR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计算机组成原理',
+                                        url: 'https://xuaii.github.io/tag/q7ogHTpxn/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷CPU',
+                                        url: 'https://xuaii.github.io/tag/nk7eMi6weI/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷指令集',
+                                        url: 'https://xuaii.github.io/tag/y0QD2lmwzR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷我的世界',
+                                        url: 'https://xuaii.github.io/tag/Oe6pf-JNw/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编译原理',
+                                        url: 'https://xuaii.github.io/tag/-xYITLanXJ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷自动化',
+                                        url: 'https://xuaii.github.io/tag/QU-T8fr1fk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷挖坑',
+                                        url: 'https://xuaii.github.io/tag/aYIh6YBFp/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷摘抄',
+                                        url: 'https://xuaii.github.io/tag/aMOS10oo8/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷c++',
+                                        url: 'https://xuaii.github.io/tag/z4Tg_U8wV/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷反射',
+                                        url: 'https://xuaii.github.io/tag/S6muC6Uh7u/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷godot',
+                                        url: 'https://xuaii.github.io/tag/Dqmvh-Mfk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编辑器插件',
+                                        url: 'https://xuaii.github.io/tag/2btgH2JlXq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏开发',
+                                        url: 'https://xuaii.github.io/tag/jy5L0E1G3/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷总结',
+                                        url: 'https://xuaii.github.io/tag/qmCbMC82l_/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷决策树',
+                                        url: 'https://xuaii.github.io/tag/zPTyWgNBT/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷机器学习',
+                                        url: 'https://xuaii.github.io/tag/cJZOT8XITZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷线性模型',
+                                        url: 'https://xuaii.github.io/tag/49U0AO548/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷神经网络',
+                                        url: 'https://xuaii.github.io/tag/YsZNZqLqv/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷SVM',
+                                        url: 'https://xuaii.github.io/tag/TUnAlz6DG/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷转载',
+                                        url: 'https://xuaii.github.io/tag/QvoiM26MU/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '马里奥-Ground',
+                                        url: 'http://music.163.com/song/media/outer/url?id=31719143.mp3',
+                                        artist: '',
+                                        cover: 'http://p2.music.126.net/CSH0Y-N4RWqCNmJBt3yT-Q==/19211766672383482.jpg?param=50y50',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                                <a target="_blank" href="https://pages.github.com/" title="">Powered by Github Pages</a>
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

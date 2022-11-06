@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Island and Winds
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Island and Winds">
+<meta name="description" content="记录学习和生活 💕">
+<meta name="keywords" content="code,life,sleep">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1667771736332">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<!-- use my domain directly -->
+<script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" />
+<!-- <script src="https://xuaii.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://xuaii.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://xuaii.github.io/styles/main.css" /> -->
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<!-- 添加的关于 markdown 内容 -->
+<!-- <script src=https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js></script>
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+<script>
+    $().ready(
+        function() {
+            if (window.localStorage.getItem('first_visit') != 1) {
+                window.localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                window.localStorage.setItem('first_visit', 1);
+            }
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = mediaCssText;
+                }
+                document.documentElement.style.cssText = cssText;
+                document.getElementsByClassName('card-bg')[0].style.cssText = mediaCssText;
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                imgList = document.getElementsByTagName('img');
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.cssText = '';
+                }
+                document.documentElement.style.cssText = '';
+                document.getElementsByClassName('card-bg')[0].style.cssText = '';
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTS4B2P0"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+                    gtag('config', 'G-Y4KTS4B2P0');
+                </script>
+                
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #btnStyle:hover {
+                            transition: all .3s ease;
+                            /*color: #fff;*/
+                            /*background-color: #6b6b6b;*/
+                            background-color: #eaeaea;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #btnStyle {
+                            /*background-color: #efefef;*/
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://xuaii.github.io">
+            Island and Winds
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item" class="menu-item">
+                    <div id="tp-weather-widget"></div>
+                </li>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1667771736332" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            🎈首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            📒归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            🏷️标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/posts">
+                            📄文章
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/record">
+                            ☔记录
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            🧶关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                [Godot] Geometry 对象使用
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/godot-geometry/" class="leancloud_visitors" data-flag-title="[Godot] Geometry 对象使用">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            8.8分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Island and Winds" src="https://xuaii.github.io/images/avatar.png?v=1667771736332" srcset="https://xuaii.github.io/images/avatar.png?v=1667771736332" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://xuaii.github.io" title="由Island and Winds发布" rel="author">Island and Winds<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2022-09-12</span>
+                                        </div>
+                        </header>
+                        
+
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <p>之前一直忽略了官方文档中的<a href="https://docs.godotengine.org/zh_CN/stable/classes/index.html">API列表</a>，很多常用的操作都有现成的API，不需要自己去写，记录一下常用的 Geometry 对象使用方法。</p>
+<p>Geometry 为用户提供了一组<strong>辅助函数</strong>，用于<strong>创建</strong>、<strong>剪裁</strong>、<strong>最近邻</strong>、<strong>判断位置/相交</strong>、<strong>缩放</strong>、<strong>其他</strong> 几何操作。</p>
+<p>// 好像缺少<strong>曲面细分</strong>等操作</p>
+<p><strong>创建几何形状</strong></p>
+<pre><code class="language-c#">Array build_box_planes ( Vector3 extents );
+</code></pre>
+<pre><code class="language-c#">// 生成面状胶囊
+Array build_capsule_planes ( float radius, float height, int sides, int lats, Vector3.Axis axis=2 );
+</code></pre>
+<pre><code class="language-c#">// 生成切面圆柱体
+Array build_cylinder_planes ( float radius, float height, int sides, Vector3.Axis axis=2 );
+</code></pre>
+<p><strong>剪裁</strong><br>
+该类操作可能导致产生外部多边形（边界）和内部多边形（孔），可以通过调用 is_polygon_clockwise来区分。</p>
+<pre><code class="language-c#">// 使用平面剪裁多边形
+PoolVector3Array clip_polygon ( PoolVector3Array points, Plane plane );
+</code></pre>
+<pre><code class="language-c#">/*
+将polygon_a与polygon_b进行对比，并返回一个被剪切的多边形数组。这在多边形之间执行OPERATION_DIFFERENCE。如果polygon_b与polygon_a完全重合，则返回一个空数组。
+*/
+Array clip_polygons_2d ( PoolVector2Array polygon_a, PoolVector2Array polygon_b );
+</code></pre>
+<pre><code class="language-c#">/*
+将polyline与polygon相对应，并返回一个折线数组。在折线和多边形之间执行OPERATION_DIFFERENCE。这个操作可以被认为是用一个封闭的形状切割一条折线。
+*/
+Array clip_polyline_with_polygon_2d ( PoolVector2Array polyline, PoolVector2Array polygon );
+</code></pre>
+<pre><code class="language-c#">// 相互排除由 polygon_a 和 polygon_b（见 intersect_polygons_2d）的交叉点定义的公共区域，并返回一个排除的多边形数组。这在多边形之间执行了 **OPERATION_XOR**。换句话说，返回多边形之间除公共区域外的所有区域。
+Array exclude_polygons_2d ( PoolVector2Array polygon_a, PoolVector2Array polygon_b )
+</code></pre>
+<pre><code class="language-c#">// 给出一个Vector2s的数组，以逆时针的顺序返回凸面的点的列表。最后一个点与第一个点相同。
+// 将任意多边形分解为多个凸包
+PoolVector2Array convex_hull_2d ( PoolVector2Array points )
+</code></pre>
+<pre><code class="language-c#">// 将polygon_a与polygon_b相交并返回相交的多边形数组。这在多边形之间执行OPERATION_INTERSECTION。换句话说，返回多边形共享的公共区域。如果没有发生相交，则返回一个空数组。
+Array intersect_polygons_2d ( PoolVector2Array polygon_a, PoolVector2Array polygon_b )
+</code></pre>
+<pre><code class="language-c#">// 将polyline与polygon相交，并返回相交的折线数组。这在折线和多边形之间执行了OPERATION_INTERSECTION。这个操作可以被认为是用一个封闭的形状砍断一条线。
+Array intersect_polyline_with_polygon_2d ( PoolVector2Array polyline, PoolVector2Array polygon )
+</code></pre>
+<pre><code class="language-c#">// 检查两行（from_a，dir_a）和（from_b，dir_b）是否相交。如果是，则将相交点返回为Vector2。如果没有交叉，则返回一个空的Variant。
+// 注意：线是使用方向向量而不是终点指定的。
+Variant line_intersects_line_2d ( Vector2 from_a, Vector2 dir_a, Vector2 from_b, Vector2 dir_b )
+</code></pre>
+<pre><code class="language-c#">// 合并（结合）polygon_a 和 polygon_b，并返回一个合并的多边形数组。在多边形之间执行 OPERATION_UNION。
+Array merge_polygons_2d ( PoolVector2Array polygon_a, PoolVector2Array polygon_b )
+
+// 合并（结合）polygon_a 和 polygon_b，并返回一个合并的多边形数组。在多边形之间执行 OPERATION_UNION。
+Array merge_polygons_2d ( PoolVector2Array polygon_a, PoolVector2Array polygon_b )
+</code></pre>
+<p><strong>最近邻</strong></p>
+<pre><code class="language-c#">// 返回3D部份（s1, s2）上离point最近的3D点。返回的点将总是在指定的部份内。
+Vector3 get_closest_point_to_segment ( Vector3 point, Vector3 s1, Vector3 s2 )
+
+// 返回2D段（s1, s2）上最接近point的2D点。返回的点将总是在指定的线段内。
+Vector2 get_closest_point_to_segment_2d ( Vector2 point, Vector2 s1, Vector2 s2 )
+
+// 返回由（s1, s2）定义的三维直线上最接近 point的三维点。返回的点可以在线段内（s1, s2），也可以在线段外，即在线段延伸的某处。
+Vector3 get_closest_point_to_segment_uncapped ( Vector3 point, Vector3 s1, Vector3 s2 )
+
+// 返回由（s1, s2）定义的二维线上最接近point的二维点。返回的点可以在线段（s1, s2）内，也可以在线段外，即在从线段延伸出来的某处。
+Vector2 get_closest_point_to_segment_uncapped_2d ( Vector2 point, Vector2 s1, Vector2 s2 )
+
+// 给定两个 3D 线段 (p1，p2) 和 (q1，q2)，到这两个线段上最接近的两个点。返回一个 PoolVector3Array，其中包含 (p1，p2) 上的这个点以及 (q1，q2) 上的伴随点.
+PoolVector3Array get_closest_points_between_segments ( Vector3 p1, Vector3 p2, Vector3 q1, Vector3 q2 )
+
+// 给定两个 2D 线段 (p1，q1) 和 (p2，q2)，找到这两个线段上最接近的两个点。返回一个 PoolVector2Array，其中包含 (p1，q1) 上的这个点以及 (p2, q2) 上的伴随点.
+PoolVector2Array get_closest_points_between_segments_2d ( Vector2 p1, Vector2 q1, Vector2 p2, Vector2 q2 )
+</code></pre>
+<p><strong>判断位置/相交</strong></p>
+<pre><code class="language-c#">// 返回true时，point位于圆的内部或者正好位于圆的边界上，否则将返回false。
+bool is_point_in_circle ( Vector2 point, Vector2 circle_position, float circle_radius )
+
+// 返回true时，point位于多边形polygon的内部或者正好位于多边形的边界上，否则将返回false。
+bool is_point_in_polygon ( Vector2 point, PoolVector2Array polygon )
+
+// 如果多边形 polygon 的顶点按顺时针顺序排序，则返回 true，否则返回 false。
+bool is_polygon_clockwise ( PoolVector2Array polygon )
+
+// 如果点point在a、b和c所指定的三角形内，则返回。
+bool point_is_inside_triangle ( Vector2 point, Vector2 a, Vector2 b, Vector2 c ) const
+
+// 测试从from开始，方向为dir的3D射线是否与a、b和c指定的三角形相交。如果是，返回相交点为Vector3。如果没有发生相交，将返回一个空的Variant。
+Variant ray_intersects_triangle ( Vector3 from, Vector3 dir, Vector3 a, Vector3 b, Vector3 c )
+
+// 给出2D线段（segment_from，segment_to），返回线段上与圆心为 circle_position 、半径为 circle_radius 圆的相交位置（以0到1之间的数字）。如果线段没有与圆相交，则返回-1（如果延伸线段的线段与圆相交，但线段没有相交，也是这种情况）。
+float segment_intersects_circle ( Vector2 segment_from, Vector2 segment_to, Vector2 circle_position, float circle_radius )
+
+// 给定一个通过数组 planes 中的 Planes 定义的凸面体，测试线段（from，to）是否与该面体相交。如果找到相交点，返回一个PoolVector3Array，包含相交点和凸面体的法线。如果没有找到相交点，返回的数组为空。
+PoolVector3Array segment_intersects_convex ( Vector3 from, Vector3 to, Array planes )
+
+// 检查线段（from，to）是否与高度 height 的圆柱体相交，圆柱体以原点为中心，半径为 radius。如果没有，返回一个空的 PoolVector3Array。如果发生了相交，返回的数组包含相交点和圆柱体在相交点的法线。
+PoolVector3Array segment_intersects_cylinder ( Vector3 from, Vector3 to, float height, float radius )
+
+// 检查两段（from_a, to_a）和（from_b, to_b）是否相交。如果是，返回相交点为Vector2。如果没有发生相交，返回一个空的Variant。
+Variant segment_intersects_segment_2d ( Vector2 from_a, Vector2 to_a, Vector2 from_b, Vector2 to_b )
+
+// 检查线段（from，to）是否与球心为 sphere_position、半径为 sphere_radius 的球体相交。如果没有，返回一个空的 PoolVector3Array。如果相交，返回一个包含交点和交点处球体法线的 PoolVector3Array。
+PoolVector3Array segment_intersects_sphere ( Vector3 from, Vector3 to, Vector3 sphere_position, float sphere_radius )
+
+// 测试段（from，to）是否与三角形a，b，c相交。如果是，返回相交点为Vector3。如果没有发生相交，则返回一个空的Variant。
+Variant segment_intersects_triangle ( Vector3 from, Vector3 to, Vector3 a, Vector3 b, Vector3 c )
+</code></pre>
+<p><strong>缩放</strong></p>
+<pre><code class="language-c#">Array offset_polygon_2d ( PoolVector2Array polygon, float delta, PolyJoinType join_type=0 )
+
+// 通过 delta 单位（像素）膨胀或缩小多边形 polygon。如果 delta 是正数，使多边形向外增长。如果 delta 是负数，则使多边形向内收缩。返回一个多边形数组，因为膨胀或缩小可能导致多个离散的多边形。如果 delta 为负数，并且其绝对值大约超过了多边形的最小边界矩形尺寸，则返回一个空数组。
+
+// 每个多边形的顶点将按照 join_type 确定的方式进行圆角处理，见 PolyJoinType。
+
+// 注意：要具体平移多边形的顶点，请使用 Transform2D.xform 方法。
+// eg:
+var polygon = PoolVector2Array([ Vector2(0, 0), Vector2(100, 0), Vector2(100, 100), Vector2(0, 100) ] )
+var offset = Vector2(50, 50)
+polygon = Transform2D(0, offset).xform(polygon)
+print(polygon) #打印出 [Vector2(50, 50), Vector2(150, 50), Vector2(150, 150), Vector2(50, 150)] 。
+</code></pre>
+<pre><code class="language-c#">// 通过delta单位（像素）对多边形线polyline进行充气或放气，产生多边形。如果delta为正数，则使多段线向外增长。返回一个多边形数组，因为充气/放气可能导致多个离散的多边形。如果delta为负数，返回一个空数组。
+// 每个多边形的顶点将由join_type决定，见PolyJoinType。
+// 每个多边形的端点将由end_type决定，见PolyEndType。
+
+Array offset_polyline_2d ( PoolVector2Array polyline, float delta, PolyJoinType join_type=0, PolyEndType end_type=3 )
+</code></pre>
+<p><strong>其他</strong></p>
+<pre><code class="language-c#">// 给定表示图块的Vector2数组，构建一个地图集。返回的字典有两个键：points是Vector2的向量，用于指定每个图块的位置，size包含整个图集的整体大小，作为Vector2。
+
+// 不太明白这个有什么用
+Dictionary make_atlas ( PoolVector2Array sizes )
+</code></pre>
+<pre><code class="language-c#">// 对由离散的 point 点集合指定的区域进行三角化，使得任何点都不在任何结果三角形的外接圆内。返回一个 PoolIntArray，其中每个三角形由 point 点的三个连续的点索引组成（即返回的数组将有 n * 3 元素，n 是找到的三角形的数量）。如果三角化没有成功，将返回一个空的 PoolIntArray。
+PoolIntArray triangulate_delaunay_2d ( PoolVector2Array points )
+
+// 对多边形 polygon 中的点指定的多边形进行三角化。返回一个 PoolIntArray，其中每个三角形由 polygon 中三个连续的点索引组成（即返回的数组将有 n * 3 个元素，n 是找到的三角形的数量）。如果三角化没有成功，将返回一个空的 PoolIntArray。
+PoolIntArray triangulate_polygon ( PoolVector2Array polygon )
+</code></pre>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Island and Winds<br>永久链接:
+                                    <a href="https://xuaii.github.io/post/godot-geometry/" title="[Godot] Geometry 对象使用">
+                                        https://xuaii.github.io/post/godot-geometry/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                        <div class="nearby-article-left" style="padding: 10px;">
+                            <a class="prev" rel="prev" href="https://xuaii.github.io/post/you-xi-wai-gua-ai-zi-miao/">
+                                <i class="fa fa-chevron-left"></i>
+                                [AI] Auxiliary positioning and tracker
+                            </a>
+                        </div>
+                        
+                            
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://xuaii.github.io/post/suan-fa-xue-xi-lie-biao/">
+                                        算法学习列表<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xuaii.github.io/post/godot-geometry/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xuaii.github.io/post/godot-geometry/&sharesource=qzone&title=[Godot] Geometry 对象使用&pics=https://xuaii.github.io/images/avatar.png?v=1667771736332&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://xuaii.github.io/post/godot-geometry/&sharesource=weibo&title=[Godot] Geometry 对象使用 + " - " + &pic="https://xuaii.github.io/images/avatar.png?v=1667771736332"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'CYFKzMa2Qb2WGxCgVV2PLhit-gzGzoHsz',
+        appKey: 'NafP7wLckvLJOXjRfRJ6SV7C',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://xuaii.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷idea',
+                                        url: 'https://xuaii.github.io/tag/RH8VFDFV9/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷优化',
+                                        url: 'https://xuaii.github.io/tag/3u8paddqN/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷关卡设计',
+                                        url: 'https://xuaii.github.io/tag/4wlI74y2BW/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Godot',
+                                        url: 'https://xuaii.github.io/tag/n-3KDzmbKR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏机制',
+                                        url: 'https://xuaii.github.io/tag/RXsLi4wHZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷计算机组成原理',
+                                        url: 'https://xuaii.github.io/tag/q7ogHTpxn/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷CPU',
+                                        url: 'https://xuaii.github.io/tag/nk7eMi6weI/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷指令集',
+                                        url: 'https://xuaii.github.io/tag/y0QD2lmwzR/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷我的世界',
+                                        url: 'https://xuaii.github.io/tag/Oe6pf-JNw/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编译原理',
+                                        url: 'https://xuaii.github.io/tag/-xYITLanXJ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷自动化',
+                                        url: 'https://xuaii.github.io/tag/QU-T8fr1fk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷挖坑',
+                                        url: 'https://xuaii.github.io/tag/aYIh6YBFp/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷摘抄',
+                                        url: 'https://xuaii.github.io/tag/aMOS10oo8/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷c++',
+                                        url: 'https://xuaii.github.io/tag/z4Tg_U8wV/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷反射',
+                                        url: 'https://xuaii.github.io/tag/S6muC6Uh7u/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷godot',
+                                        url: 'https://xuaii.github.io/tag/Dqmvh-Mfk/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷编辑器插件',
+                                        url: 'https://xuaii.github.io/tag/2btgH2JlXq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏开发',
+                                        url: 'https://xuaii.github.io/tag/jy5L0E1G3/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷总结',
+                                        url: 'https://xuaii.github.io/tag/qmCbMC82l_/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷数学',
+                                        url: 'https://xuaii.github.io/tag/NODlbSy7k/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷决策树',
+                                        url: 'https://xuaii.github.io/tag/zPTyWgNBT/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷机器学习',
+                                        url: 'https://xuaii.github.io/tag/cJZOT8XITZ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷线性模型',
+                                        url: 'https://xuaii.github.io/tag/49U0AO548/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷神经网络',
+                                        url: 'https://xuaii.github.io/tag/YsZNZqLqv/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷SVM',
+                                        url: 'https://xuaii.github.io/tag/TUnAlz6DG/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷转载',
+                                        url: 'https://xuaii.github.io/tag/QvoiM26MU/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '马里奥-Ground',
+                                        url: 'http://music.163.com/song/media/outer/url?id=31719143.mp3',
+                                        artist: '',
+                                        cover: 'http://p2.music.126.net/CSH0Y-N4RWqCNmJBt3yT-Q==/19211766672383482.jpg?param=50y50',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    
+                                        
+                                            <li class="lite-item">
+                                                <header class="lite-item-header">
+                                                    <h3 class="lite-item-title">
+                                                        
+                                                    </h3>
+                                                </header>
+                                                <div class="textwidget">
+                                                    <div id="textwidget-box" style="width:100%; height:auto;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://mirror.xyz/opang.eth'"><span class="link_a"><a href="https://mirror.xyz/opang.eth" alt="opang.eth ">opang.eth -opang&#39;s web3 blog</a></span></p>
+
+                                                                    
+                                                                    <p onclick="javascript:top.location='https://blog.csdn.net/qq_40654505/category_10121252.html'"><span class="link_a"><a href="https://blog.csdn.net/qq_40654505/category_10121252.html" alt="椰奶冻不安全 ">椰奶冻不安全 -椰奶冻不安全 &#39;s blog</a></span></p>
+
+                                                                    
+                                                                        
+                                                        </div>
+                                                    </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2022.8.1'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            <a href="">
+                                Theme - Card
+                            </a>&nbsp;|&nbsp; &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://xuaii.github.io">
+                                Island and Winds
+                                <a target="_blank" href="https://pages.github.com/" title="">Powered by Github Pages</a>
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        
+        App.weather();
+        
+        var themeIcon = document.getElementById("themeIcon");
+        const currentTheme = window.localStorage.getItem('theme');
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cIsland and Winds\'%cBlog';
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>
