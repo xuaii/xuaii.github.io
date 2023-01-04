@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>计算机指令系统 - xuii&#39;s blog wind</title><meta name="Description" content=""><meta property="og:title" content="计算机指令系统" />
+<meta property="og:description" content="指令 计算机指令是机器码，是汇编码，是硬件软件交互界面；指令长度是CPU指令长度（例如：32 位/64位） 常规的指令形式是 OP &#43; Address * n; 指令字长和机" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" /><meta property="og:image" content="http://blog.xuaii.cc/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-03T18:26:53+08:00" />
+<meta property="article:modified_time" content="2023-01-03T18:26:53+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://blog.xuaii.cc/logo.png"/>
+
+<meta name="twitter:title" content="计算机指令系统"/>
+<meta name="twitter:description" content="指令 计算机指令是机器码，是汇编码，是硬件软件交互界面；指令长度是CPU指令长度（例如：32 位/64位） 常规的指令形式是 OP &#43; Address * n; 指令字长和机"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" /><link rel="prev" href="http://blog.xuaii.cc/idea-xr-you-xi-ling-gan/" /><link rel="next" href="http://blog.xuaii.cc/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "计算机指令系统",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/blog.xuaii.cc\/ji-suan-ji-zhi-ling-xi-tong\/"
+        },"genre": "posts","wordcount":  5984 ,
+        "url": "http:\/\/blog.xuaii.cc\/ji-suan-ji-zhi-ling-xi-tong\/","datePublished": "2023-01-03T18:26:53+08:00","dateModified": "2023-01-03T18:26:53+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xuaii"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="xuii&#39;s blog wind">Wind Island</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/record/"> 记录 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="xuii&#39;s blog wind">Wind Island</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/record/" title="">记录</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">计算机指令系统</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="blog.xuii.cc" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xuaii</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-03">2023-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5984 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#指令">指令</a></li>
+    <li><a href="#指令扩展">指令扩展</a></li>
+    <li><a href="#指令操作类型">指令操作类型</a></li>
+    <li><a href="#指令寻址方式">指令寻址方式</a>
+      <ul>
+        <li><a href="#指令寻址">指令寻址</a></li>
+        <li><a href="#数据寻址">数据寻址</a></li>
+      </ul>
+    </li>
+    <li><a href="#程序的机器码表示---汇编">程序的机器码表示 - 汇编</a>
+      <ul>
+        <li><a href="#环境配置">环境配置</a></li>
+        <li><a href="#汇编指令格式">汇编指令格式</a></li>
+        <li><a href="#常用机器指令">常用机器指令</a></li>
+        <li><a href="#过程调用机器表示">过程调用机器表示</a></li>
+        <li><a href="#选择语句机器表示">选择语句机器表示</a></li>
+        <li><a href="#循环语句机器表示">循环语句机器表示</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="指令">指令</h2>
+<p>计算机指令是机器码，是汇编码，是硬件软件交互界面；指令长度是CPU指令长度（例如：32
+位/64位）
+常规的指令形式是 OP + Address * n;
+指令字长和机器字长没有固定关系，通常有半指令字长，单指令字长，双指令字长，此外指令长度可以是固定的也可以是不定的，通常来说定长指令更易于处理</p>
+<ol>
+<li>
+<p>零地址指令</p>
+<ul>
+<li>不需要操作数的指令(空操作，停机，关中断指令)，</li>
+<li>堆栈计算机指令</li>
+</ul>
+</li>
+<li>
+<p>一地址指令</p>
+<ul>
+<li>$OP(A_1)\rightarrow A_1$(自增,自减,求反求补)</li>
+<li>$(ACC)OP(A-1)\rightarrow ACC$, 隐含约定地址， 计算寻址范围</li>
+</ul>
+</li>
+<li>
+<p>二地址指令
+算术指令，逻辑运算指令
+指令含义 $(A_1)OP(A_2)\rightarrow A_1$</p>
+</li>
+<li>
+<p>三地址指令
+$(A_1)OP(A_2)\rightarrow A_3$, 如果地址均为主存地址， 完成该类指令需要四次访存(取指令 * 1， 取操作数<em>2， 存放结果</em>1)</p>
+</li>
+<li>
+<p>四地址指令
+最后一个地址 $A_4$ 是下一条将要执行的指令</p>
+</li>
+</ol>
+<h2 id="指令扩展">指令扩展</h2>
+<p>虽然现代处理器采用大都采用定长指令，但是为了在此基础上保留指令的丰富类别，采用可变长操作码的定长指令；这意味着操作码位数长度不变，且分散在指令的不同位置，这将增加指令的译码难度，增加控制器复杂度。</p>
+<h2 id="指令操作类型">指令操作类型</h2>
+<p><strong>数据传送</strong></p>
+<ol>
+<li>寄存器之间的传送(MOV)</li>
+<li>从内存单元读取数据到CPU寄存器(LOAD)</li>
+<li>从CPU寄存器写数据到内存单元(STORE)</li>
+</ol>
+<p><strong>算术和逻辑</strong>
+加(ADD)、 减(SUB)、 乘(MUL)、 除(DIV)、 比较(CMP)、 加1(INC)、 减1(DEC)、 与(AND)、或(OR)、 取反(NOT)、 亦或(XOR)</p>
+<p><strong>移位操作</strong>
+算法移位、逻辑移位、循环移位</p>
+<p><strong>转移操作</strong></p>
+<ol>
+<li>无条件转移(JMP)</li>
+<li>条件转移(BRANCH)</li>
+<li>调用(CALL)</li>
+<li>返回(RET)</li>
+<li>陷阱(TRAP)</li>
+</ol>
+<p><strong>输入输出操作</strong>
+完成 CPU 与外部设备交换数据或传送控制命令及状态信息</p>
+<h2 id="指令寻址方式">指令寻址方式</h2>
+<p>&rsquo;&rsquo; <strong>寻址方式</strong>是指寻找指令或指令操作数有效地址的方式 &rsquo;'
+寻址方式分为<strong>指令寻址</strong>和<strong>数据寻址</strong>两类</p>
+<p>指令中数据字段代表的不是真实地址而是<strong>形式地址</strong>， 形式地址结合<strong>寻址方式</strong>可以计算真实地址
+如果 A 表示<strong>寄存器编号</strong>或者<strong>内存地址</strong>， 那么 (A) 表示其中保存的值</p>
+<h3 id="指令寻址">指令寻址</h3>
+<ol>
+<li>顺序寻址: 程序计数器PC++，自动形成下一条指令地址</li>
+<li>跳跃寻址:
+跳跃寻址的地址依然是由 PC 寄存器指出的， 指令跳跃收到 <strong>状态寄存器</strong> 和 <strong>操作数</strong>的控制，跳跃地址可以是直接由标记符得到，也可以由当前指令偏移得到；即 <strong>绝对地址</strong> 和 <strong>相对地址</strong></li>
+</ol>
+<h3 id="数据寻址">数据寻址</h3>
+<p>本质是如何在指令中 <strong>表示</strong> 操作数的地址，如何用这种表示计算出 <strong>操作数地址</strong></p>
+<ol>
+<li>
+<p>隐含寻址
+例如单地址指令中隐含的地址一样，操作数地址隐含在操作码的定义里</p>
+</li>
+<li>
+<p>立即数寻址
+补码表示操作数直接在指令中给出，例如 ADD 1 1
+<strong>优点</strong> 是过程中不用访存
+<strong>缺点</strong> 立即数长度限制了立即数范围</p>
+</li>
+<li>
+<p>直接寻址
+直接在指令中指出<strong>操作数地址</strong>的真实值
+<strong>优点</strong> 是简单仅访问一次内存
+<strong>缺点</strong> 是指令长度决定了地址的上限，操作数的地址修改不容易！</p>
+</li>
+<li>
+<p>间接寻址
+指令地址给出<strong>操作数地址</strong>所在<strong>储存单元的地址</strong>， 也就是需要一次间接寻址，间接寻址也可以是多次间接寻址，通过主存中取得的字的<strong>第一位</strong>的取值判断是否是取得操作数地址：</p>
+<ul>
+<li>取 0， 表示当前地址是操作数地址</li>
+<li>取 1， 表示当前地址是操作数间址
+<strong>优点</strong> 扩大寻址范围，方便子程序返回
+<strong>缺点</strong> 多次访存， 一般扩大寻址地址的方法是寄存器间接寻址</li>
+</ul>
+</li>
+<li>
+<p>寄存器寻址
+直接在指令字中给出操作数所在寄存器编号</p>
+<p><strong>优点</strong>  不访问主存，执行速度快， 支持向量矩阵运算
+<strong>缺点</strong> 寄存器价格贵，数量有限</p>
+</li>
+<li>
+<p>寄存器间接寻址
+在指令字中给出寄存器编号，该寄存器内存储操作数的地址
+<strong>优点</strong> 速度更快，用于扩展寻址范围
+<strong>缺点</strong> 只能一次间址，需要访问主存</p>
+</li>
+<li>
+<p>相对寻址
+相对寻址是相对于 PC 上加上指令偏移量 A 而形成的有效地址，A 可正可负，补码表示
+<strong>优点</strong> 操作数地址不固定，广泛用于<strong>转移指令</strong>
+<strong>缺点</strong> A 的位数决定寻址范围
+<strong>注意</strong> PC 寄存器取下一条指令后自增，然后再加上偏移量</p>
+</li>
+<li>
+<p>基址寻址
+实际地址 EA = (BR) + A，即基址 + 形式地址。基址寄存器是<strong>面向操作系统</strong>的，主要解决程序逻辑空间与储存器物理空间无关
+<strong>优点</strong> 扩大寻址范围，利于多道程序设计，利于编写非线性程序（浮动程序），用于各种页表，段表实现
+<strong>缺点</strong> 形式地址位数较短</p>
+</li>
+<li>
+<p>变址寻址
+变址寄存器寻址是 形式地址 A + 变址寄存器 IX，这里的变址寄存器区别于基址寄存器，是<strong>面向用户</strong>的，其中 IX 的位数足以表示整个存储空间
+<strong>优点</strong> 扩大寻址范围，便于编制循环程序，用于实现数组，因为指令中的 A 是<strong>固定的</strong>， 而IX是可以由用户设定的
+<strong>缺点</strong> A 不可变？硬找借口？</p>
+</li>
+<li>
+<p>堆栈寻址
+堆栈是存储器(或专用寄存器)中一块特定的，后进先出的(LIFO) 原则管理的存储区，该存储区中 读/写单元的地址使用一个特定<strong>寄存器SP</strong>给出的，硬堆栈/软堆栈。
+<strong>硬堆栈</strong> 是寄存器堆栈，速度快，成本高，不适合做大容量堆栈
+<strong>软堆栈</strong> 是主存中划分的一段区域，速度稍慢，成本低，适合大容量</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">寻址方式</th>
+<th style="text-align:center">有效地址</th>
+<th style="text-align:center">访存次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">隐含寻址</td>
+<td style="text-align:center">程序指定</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">立即寻址</td>
+<td style="text-align:center">A是操作数</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">直接寻址</td>
+<td style="text-align:center">EA=A</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">一次间接寻址</td>
+<td style="text-align:center">EA=(A)</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">寄存器寻址</td>
+<td style="text-align:center">EA=R_i</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">寄存器一次间接寻址</td>
+<td style="text-align:center">EA=(R_i)</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">相对寻址</td>
+<td style="text-align:center">EA=(PC)+A</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">基址寻址</td>
+<td style="text-align:center">EA=(BR)+A</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">变址寻址</td>
+<td style="text-align:center">EA=(IX)+A</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="程序的机器码表示---汇编">程序的机器码表示 - 汇编</h2>
+<p>x86 处理器中包含8个32位通用寄存器</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">寄存器名称</th>
+<th style="text-align:center">位数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">EAX</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">累加器(Accumulator)</td>
+</tr>
+<tr>
+<td style="text-align:center">EBX</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">基址寄存器(Base Register)</td>
+</tr>
+<tr>
+<td style="text-align:center">ECX</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">计数寄存器(Count Register)</td>
+</tr>
+<tr>
+<td style="text-align:center">EDX</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">数据寄存器(Data Register)</td>
+</tr>
+<tr>
+<td style="text-align:center">ESI</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">变址寄存器(Index Register)</td>
+</tr>
+<tr>
+<td style="text-align:center">EDI</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">变址寄存器(Index Register)</td>
+</tr>
+<tr>
+<td style="text-align:center">EBP</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">堆栈基指针(Base Pointer)</td>
+</tr>
+<tr>
+<td style="text-align:center">ESP</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">堆栈顶指针(Stack Pointer)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明</strong> 前四个寄存器 EAX, EBX, ECX, EDX 都是32位寄存器，但是可以仅仅访问其中的半字例如：($EAX = AH + AL$), 除EBP和ESP外，其余寄存器的使用是比较任意的。</p>
+<p>x64 汇编增加了几个寄存器和引入新的指令格式，在此仅学习 x86汇编。</p>
+<h3 id="环境配置">环境配置</h3>
+<p>vscode + MASM/TASM 插件
+测试代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">DATA</span> <span class="ow">SEG</span><span class="nv">MENT</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">MESG</span> <span class="nv">DB</span> <span class="s">&#34;This is an Assembly Language Programe.&#34;</span><span class="p">,</span> <span class="mh">0DH</span><span class="p">,</span> <span class="mh">0AH</span><span class="p">,</span> <span class="s">&#34;$&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">SPACE</span> <span class="nv">DB</span> <span class="s">&#34; &#34;</span><span class="p">,</span> <span class="s">&#34;$&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">DATA</span> <span class="nv">ENDS</span>
+</span></span><span class="line"><span class="cl"><span class="nf">CODE</span> <span class="ow">SEG</span><span class="nv">MENT</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ASSUME</span> <span class="nb">CS</span><span class="p">:</span><span class="nv">CODE</span><span class="p">,</span> <span class="nb">DS</span><span class="p">:</span><span class="nv">DATA</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">START:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">AX</span><span class="p">,</span> <span class="nv">DATA</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">DS</span><span class="p">,</span> <span class="nb">AX</span>              <span class="c1">; 将 DATA 段的段首址存入 DS</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">BX</span><span class="p">,</span> <span class="mh">01H</span>             <span class="c1">; BX 初始值设为 1</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">AGAIN:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">DX</span><span class="p">,</span> <span class="nv">OFFSET</span> <span class="nv">MESG</span>     <span class="c1">; 取欲显示的字符偏移量赋给 DX</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">AH</span><span class="p">,</span> <span class="mh">09H</span>             <span class="c1">; 调用 9号(显示)DOS功能子程序</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">INT</span> <span class="mh">21H</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">CX</span><span class="p">,</span> <span class="nb">BX</span>              <span class="c1">; 将 BX 的值赋给 CX</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">INC</span> <span class="nb">BX</span>
+</span></span><span class="line"><span class="cl">    <span class="nl">NEXT:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">DX</span><span class="p">,</span> <span class="nv">OFFSET</span> <span class="nb">SP</span><span class="nv">ACE</span>    <span class="c1">; 取空格字符偏移量赋给 DX</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">AH</span><span class="p">,</span> <span class="mh">09H</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">INT</span> <span class="mh">21H</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">LOOP</span> <span class="nv">NEXT</span>               <span class="c1">; 继续显示空格字符，直到 CX 为 0</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">CMP</span> <span class="nb">BX</span><span class="p">,</span> <span class="mi">10</span>              <span class="c1">; BX 与 10 比较</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">JBE</span> <span class="nv">AGAIN</span>               <span class="c1">; 没显示 10 次，转移到 AGAIN 继续执行程序</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">MOV</span> <span class="nb">AH</span><span class="p">,</span> <span class="mh">4CH</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">INT</span> <span class="mh">21H</span>                 <span class="c1">; 返回 DOS</span>
+</span></span><span class="line"><span class="cl"><span class="nf">CODE</span> <span class="nv">ENDS</span>
+</span></span><span class="line"><span class="cl"><span class="nf">END</span> <span class="nv">START</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>右键 运行/调试</p>
+<h3 id="汇编指令格式">汇编指令格式</h3>
+<p>AT&amp;T格式和Intel格式区别如下</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">项目/区别</th>
+<th style="text-align:center">AT&amp;T</th>
+<th style="text-align:center">Intel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">大小写</td>
+<td style="text-align:center">小写</td>
+<td style="text-align:center">大小写不敏感</td>
+</tr>
+<tr>
+<td style="text-align:center">操作数</td>
+<td style="text-align:center">第一个为源操作数,第二个为目的操作数</td>
+<td style="text-align:center">第一个位目的操作数，第一个为源操作数</td>
+</tr>
+<tr>
+<td style="text-align:center">前缀</td>
+<td style="text-align:center">寄存器前缀%，立即数前缀$</td>
+<td style="text-align:center">不需要前缀</td>
+</tr>
+<tr>
+<td style="text-align:center">寻址</td>
+<td style="text-align:center">使用&quot;(&ldquo;和&rdquo;)&quot;</td>
+<td style="text-align:center">使用&quot;[&quot; 和 &ldquo;]&rdquo;</td>
+</tr>
+<tr>
+<td style="text-align:center">复杂寻址</td>
+<td style="text-align:center">disp(base, index, scale), 表示偏移量，基址寄存器， 变址寄存器，比例因子;如 8(%edx, %eax, 2)</td>
+<td style="text-align:center">[edx+eax*2+8]</td>
+</tr>
+<tr>
+<td style="text-align:center">数据长度</td>
+<td style="text-align:center">在操作码后边一个字符表示操作数大小 b-&gt;byte, w-&gt;word, l-&gt;long</td>
+<td style="text-align:center">显式的注明byte ptr, word ptr, dword ptr</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong> 由于32位或64位体系结构都是由16位扩展而来，因此用 word(字) 表示16位</p>
+<h3 id="常用机器指令">常用机器指令</h3>
+<p>汇编指令通常可以分为 <strong>数据传送指令</strong>， <strong>逻辑计算指令</strong>， <strong>控制流指令</strong>
+以下以** Intel 格式**为例介绍重要指令:
+<strong>约定</strong>
+&lt;reg32&gt; 表示eax,ebx,edx,&hellip;.
+&lt;reg16&gt; 表示ax, bx, dx
+&lt;reg8&gt;   表示ah, al, bh,bl,&hellip;
+&lt;mem&gt;  表示内存地址，如[eax]、[var+4]、dword ptr [eax+ebx]
+&lt;con&gt;   表示8位、16位或32位常数</p>
+<p><strong>mov 指令</strong>
+将 <strong>第二个操作数</strong>(寄存器，内存，常数内容) 复制到 <strong>第一个操作数</strong>(寄存器或内存)，不能用于内存到内存的复制</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">mov</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>push 指令</strong>
+将操作数压入内存的栈，常用于函数调用。ESP 是栈顶指针，压栈前 ESP-=4，栈增长方向与内存地址增长方向相反，然后将操作数压入 ESP 指示的地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">push</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">push</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">push</span>     <span class="o">&lt;</span><span class="nv">con32</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="err">栈元素固定</span> <span class="err">32</span> <span class="err">位</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">push</span>     <span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">push</span>     <span class="p">[</span><span class="nv">var</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>pop 指令</strong>
+将栈顶元素送出，pop指令将 ESP 地址内容出栈，再将 ESP 值加 4</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">pop</span>     <span class="nb">edi</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pop</span>     <span class="p">[</span><span class="nb">ebx</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>add/sub 指令</strong>
+将两个操作数相加/减，结果保存到第一个操作数中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">add</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">sub</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">sub</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">sub</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">sub</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">sub</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>inc/dec 指令</strong>
+操作数自增自减指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">inc</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">dec</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">inc</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">dec</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">dec</span> <span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">inc</span>     <span class="kt">dword</span> <span class="nv">ptr</span> <span class="p">[</span><span class="nv">var</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>imul 指令</strong>
+带符号整数乘法指令，有两种形式 1. 两个操作数相加结果保存到<strong>第一个操作数</strong> 2. 三个操作数后两个数相加结果保存到<strong>第一个操作数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">imul</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">imul</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">imul</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">imul</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">tag:</span> <span class="err">这里显然不能存储到</span> <span class="err">&lt;</span><span class="nf">mem</span><span class="o">&gt;</span> <span class="err">所以该过程最多只有一次非读指令访存</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span>        <span class="err">如果乘法操作可能溢出，则编译器溢出标志</span> <span class="nf">OF</span> <span class="err">=</span> <span class="mi">1</span><span class="err">，是</span><span class="nv">CPU</span><span class="err">调溢出处理程序</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>idiv 指令</strong>
+带符号整数除法指令，他只有一个操作数，而被除数为 edx:eax中的内容（是拼接的64位整数），操作结果有两部分：商和余数，商-&gt;eax, 余数-&gt;edx</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="err">//</span> <span class="err">(</span><span class="nl">edx:</span><span class="nf">eax</span><span class="p">)</span> <span class="o">/</span> <span class="nv">op_1</span> <span class="err">=</span> <span class="nb">edx</span><span class="p">:</span><span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">idiv</span>     <span class="o">&lt;</span><span class="nv">reg32</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">idiv</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">idiv</span>     <span class="nb">ebx</span>
+</span></span><span class="line"><span class="cl"><span class="nf">idiv</span>     <span class="kt">dword</span> <span class="nv">ptr</span> <span class="p">[</span><span class="nv">var</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>and/or/xor 指令</strong>
+结果放在第一个操作数里</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">and</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">or</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">xor</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">and</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">or</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">xor</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">and</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">or</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">xor</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">and</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">or</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">xor</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">and</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">or</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">xor</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">and</span>     <span class="nb">eax</span><span class="p">,</span> <span class="mh">0fH</span>
+</span></span><span class="line"><span class="cl"><span class="nf">xor</span>     <span class="nb">edx</span><span class="p">,</span> <span class="nb">edx</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>not 指令</strong>
+位反转指令，将操作数每一位反转</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">not</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">not</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">example:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">not</span>     <span class="kt">byte</span> <span class="nv">ptr</span> <span class="p">[</span><span class="nv">var</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>neg 指令</strong>
+取负指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">neg</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">neg</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">neg</span>     <span class="nb">eax</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>shl/shr 指令</strong>
+逻辑移位指令， l 为左， r 为右，第一个操作数是被移位，第二个操作数是移位位数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">shl</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con8</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">shr</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con8</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">shl</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con8</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">shr</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con8</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">shl</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">cl</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">shr</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">cl</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">shl</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">cl</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">shr</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">cl</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nf">cl</span> <span class="err">是</span> <span class="mi">8</span> <span class="err">位寄存器</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nf">eg</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"><span class="nf">shl</span>     <span class="nb">eax</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">shr</span>     <span class="nb">ebx</span> <span class="nb">cl</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>标签</strong>
+IP 寄存器是 CPU 硬件结构，其值是不能直接指定的，只能通过控制流指令来更改，在 x86 汇编中使用标签来标记代码地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl">            <span class="nf">movesi</span><span class="p">,</span> <span class="p">[</span><span class="nb">ebp</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nl">begin:</span>      <span class="nf">xor</span> <span class="nb">ecx</span><span class="p">,</span> <span class="nb">ecx</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">mov</span> <span class="nb">eax</span><span class="p">,</span> <span class="p">[</span><span class="nb">esi</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>jump 指令</strong>
+直接跳转类似 goto 语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">jmp</span> <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jmp</span> <span class="nv">begin</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>j&lt;condition&gt; 指令</strong>
+条件转移指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">je</span>      <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">equal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jne</span>     <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">not</span> <span class="nv">equal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jz</span>      <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">last</span> <span class="nv">result</span> <span class="nv">was</span> <span class="nv">zero</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jg</span>      <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">greater</span> <span class="nv">than</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jge</span>     <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">greater</span> <span class="nv">than</span> <span class="nv">or</span> <span class="nv">equal</span> <span class="nv">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jl</span>      <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">less</span> <span class="nv">than</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jle</span>     <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span> <span class="p">(</span><span class="nv">jump</span> <span class="nv">when</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">or</span> <span class="nv">equal</span> <span class="nv">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">eg:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmp</span> <span class="nb">eax</span><span class="p">,</span> <span class="nb">ebx</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jle</span> <span class="nv">done</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">tips:</span><span class="err">这里的跳转指令并不依赖某个寄存器的值，而是依赖</span> <span class="err">由</span><span class="nf">cmp</span><span class="err">和</span><span class="nv">test</span><span class="err">指令确定的</span> <span class="nv">CPU</span> <span class="err">的状态值</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>cmp/test 指令</strong>
+cmp 用于比较两个操作数的值，test 对两个数进行逐位与运算，他们不保存操作结果，仅根据运算结果设置 CPU 状态字中的条件码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">cmp</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">test</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmp</span>     <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">test</span> <span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmp</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">test</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">mem</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmp</span>     <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span> <span class="o">/</span> <span class="nv">test</span> <span class="o">&lt;</span><span class="nv">reg</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nv">con</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">//</span> <span class="nl">tips:</span><span class="nf">cmp</span><span class="p">,</span><span class="nv">test</span><span class="err">和</span><span class="nv">jcondotion</span><span class="err">指令搭配使用，举例：</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmp</span> <span class="kt">dword</span> <span class="nv">ptr</span> <span class="p">[</span><span class="nv">var</span><span class="p">],</span> <span class="mi">10</span>     <span class="o">//</span> <span class="err">比较</span> <span class="mi">4</span> <span class="err">字节</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jne</span> <span class="nv">loop</span>                              <span class="o">//</span> <span class="err">相等继续执行，否则跳转到</span><span class="nv">loop</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">test</span> <span class="nb">eax</span><span class="p">,</span> <span class="nb">eax</span>                       <span class="o">//</span> <span class="err">测试</span><span class="nb">eax</span> <span class="err">是否为</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jz</span> <span class="nv">xxxx</span>                                 <span class="o">//</span> <span class="err">为</span><span class="mi">0</span><span class="err">则设置标志位</span> <span class="nv">ZF</span> <span class="err">位</span><span class="mi">1</span><span class="err">，跳转到</span> <span class="nv">xxxx</span> <span class="err">处执行</span>                               
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>call/ret 指令</strong>
+用于实现子程序（过程，函数等）的调用和返回， call 指令将当前执行的指令地址<strong>入栈</strong>，然后<strong>无条件转移</strong>到有标签指示的指令。call指令还会保存调用之前的信息。 ret 实现了子程序的返回机制，ret 指令<strong>弹出栈中保存的指令地址</strong>，然后无条件<strong>转移到保存的指令地址</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">call</span> <span class="o">&lt;</span><span class="nv">label</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ret</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="过程调用机器表示">过程调用机器表示</h3>
+<p>使用 call/ret 指令实现过程调用，假定过程<strong>P</strong>(调用者) 和 过程<strong>Q</strong>(被调用者)，过程调用步骤如下：</p>
+<ul>
+<li>P 将入口参数放在 Q 能访问到的地方</li>
+<li>P 将返回地址存到特定的地方，然后将控制权转移到 Q (IP寄存器指向)</li>
+<li>Q 保存 P 的现场(<strong>通用寄存器</strong>的内容)，并为自己的<strong>非静态局部变量</strong>分配空间</li>
+<li>执行过程 Q</li>
+<li>Q 回复 P 的现场，将结果放到 P 能访问到的地方，并释放局部变量所占空间</li>
+<li>Q 取出返回地址，将控制转移到 P</li>
+</ul>
+<p><strong>注意   ：</strong> 上述步骤中需要为<strong>入口参数</strong>，<strong>返回地址</strong>，<strong>过程P现场</strong>，<strong>过程Q局部变量</strong>，<strong>返回结果</strong> 找到存放空间，而用户可见的寄存器数量是有限的，因此需要在内存中用一个栈来存放数据，EAX、ECX、EDX是<strong>调用者保存寄存器</strong>，其保存和恢复过程由P负责。EBX、ESI、EDI 是<strong>被调用则保存寄存器</strong>，每一个过程都有其自己的栈区，成为<strong>栈帧(Stack Frame)</strong>。寄存器 <strong>EBP指示栈底</strong>，<strong>ESP 指向栈顶</strong>，栈从高地址向低地址增长。</p>
+<p><strong>例如</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// 被调用函数/过程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 调用者过程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">caller</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">temp1</span> <span class="o">=</span> <span class="mi">125</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">temp2</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="n">temp1</span><span class="p">,</span> <span class="n">temp2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>经过 GCC 编译后 caller 过程的汇编码如下 ：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nl">caller:</span>
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">pushl</span>       <span class="o">%</span><span class="nb">ebp</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">%</span><span class="nb">esp</span><span class="p">,</span> <span class="o">%</span><span class="nb">ebp</span>        <span class="err">#</span> <span class="err">系统栈</span> <span class="o">&amp;&amp;</span> <span class="err">用户栈</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="nf">ebp</span> <span class="err">和</span> <span class="nb">esp</span> <span class="err">是</span> <span class="err">用户栈</span> <span class="err">指针</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">而</span> <span class="nf">push</span> <span class="err">指令是对系统栈的操作</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">1</span><span class="nf">.</span> <span class="err">将当前用户栈基址压入系统栈</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">2</span><span class="nf">.</span> <span class="err">新用户栈基址设为栈顶指针</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">subl</span>        <span class="kc">$</span><span class="mi">24</span><span class="p">,</span> <span class="o">%</span><span class="nb">esp</span>         <span class="err">#</span> <span class="err">为当前过程开辟</span> <span class="mi">24</span><span class="nv">B</span> <span class="err">内存空间</span><span class="p">(</span><span class="err">栈帧</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">此时</span> <span class="nf">esp</span> <span class="err">=</span> <span class="nb">ebp</span> <span class="o">-</span> <span class="mi">24</span><span class="err">，所以栈顶指针更小</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">这里</span> <span class="err">只用了</span> <span class="err">28</span><span class="nf">B</span><span class="err">，是因为</span> <span class="nv">GCC</span> <span class="err">规定栈帧必须是</span><span class="mi">16</span><span class="nv">B</span><span class="err">的整数倍</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">2</span> <span class="err">定义变量</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="kc">$</span><span class="mi">125</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">)</span>   <span class="err">#</span> <span class="err">这里的变量是由</span> <span class="nb">esp</span> <span class="err">向</span> <span class="nb">ebp</span> <span class="err">方向依次放置</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="kc">$</span><span class="mi">80</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">3</span> <span class="err">传入函数参数</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">-</span><span class="mi">8</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>  
+</span></span><span class="line"><span class="cl">    <span class="nf">mov</span>         <span class="o">%</span><span class="nb">eax</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="o">%</span><span class="nb">esp</span><span class="p">)</span>     <span class="err">#</span> <span class="nv">temp2</span> <span class="err">先入栈</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">-</span><span class="mi">12</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>    
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">%</span><span class="nb">eax</span><span class="p">,</span> <span class="p">(</span><span class="o">%</span><span class="nb">esp</span><span class="p">)</span>      <span class="err">#</span> <span class="nv">temp1</span> <span class="err">后入栈</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">4</span> <span class="err">调用函数</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">call</span>        <span class="nv">add</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">5</span> <span class="err">取出函数返回值</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">%</span><span class="nb">eax</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">)</span>    <span class="err">#</span> <span class="err">将返回值取出到变量</span> <span class="nv">sum</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">movl</span>        <span class="o">-</span><span class="mi">4</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>    <span class="err">#</span> <span class="err">将</span> <span class="nv">sum</span> <span class="err">作为返回值</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="err">返回值是通过</span> <span class="nf">eax</span> <span class="err">寄存器返回的，所以</span><span class="nv">E</span><span class="p">(</span><span class="nv">A</span><span class="o">|</span><span class="nv">C</span><span class="o">|</span><span class="nv">D</span><span class="p">)</span><span class="nv">X</span><span class="err">寄存器是由调用者返回的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">6</span> <span class="err">离开</span> <span class="nv">add</span> <span class="err">函数</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">leave</span>                         <span class="err">#</span> <span class="err">等价于：</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="nf">movl</span>     <span class="o">%</span><span class="nb">ebp</span><span class="p">,</span> <span class="o">%</span><span class="nb">esp</span>
+</span></span><span class="line"><span class="cl">                                  <span class="err">#</span> <span class="nf">popl</span>     <span class="o">%</span><span class="nb">ebp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="nf">stage</span> <span class="mi">7</span> <span class="err">退出当前</span> <span class="nv">caller</span> <span class="err">过程</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ret</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>add 过程对应过程的汇编码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl">    <span class="nf">push</span>       <span class="o">%</span><span class="nb">ebp</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mov</span>        <span class="o">%</span><span class="nb">esp</span><span class="p">,</span> <span class="o">%</span><span class="nb">ebp</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mov</span>        <span class="mh">0xc</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>          <span class="err">#</span> <span class="err">将参数</span><span class="mi">2</span><span class="err">放入寄存器</span>
+</span></span><span class="line"><span class="cl">                                        <span class="err">#</span> <span class="err">这里的栈帧是有高位向低位</span>
+</span></span><span class="line"><span class="cl">                                        <span class="err">#</span> <span class="err">函数参数是从右往左入栈</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">mov</span>        <span class="mh">0x8</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">edx</span>          <span class="err">#</span> <span class="err">将参数</span><span class="mi">1</span><span class="err">放入寄存器</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">lea</span>        <span class="p">(</span><span class="o">%</span><span class="nb">edx</span><span class="p">,</span> <span class="o">%</span><span class="nb">eax</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>    <span class="err">#</span> <span class="err">将</span><span class="nv">add_1</span><span class="err">传入</span><span class="nv">add_2</span>
+</span></span><span class="line"><span class="cl">                                        <span class="err">#</span> <span class="err">这里是直接通过地址计算</span>
+</span></span><span class="line"><span class="cl">                                        <span class="err">#</span> <span class="err">使用</span> <span class="nf">lea</span> <span class="err">指令是因为不占用</span> <span class="nb">AL</span><span class="nv">U</span><span class="err">，比较快</span>
+</span></span><span class="line"><span class="cl">                                        <span class="err">#</span> <span class="err">使用单指令代替了多条指令</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">pop</span>        <span class="o">%</span><span class="nb">ebp</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ret</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Question</strong>：传入参数时是将参数的临时变量拷贝到了 4(%esp) 和 (%esp)，但是为什么在 add 过程中取参数时是取的 0xc(%ebp) 和 0x8(%ebp)？？</p>
+<p><strong>Answer</strong>： 因为 call 指令会改变 esp 寄存器的值，会将函数返回地址入栈，然后 esp += 4</p>
+<h3 id="选择语句机器表示">选择语句机器表示</h3>
+<p>以 c 语言为例，选择语句主要是 <strong>if-then</strong>, <strong>if-then-else</strong>, <strong>switch</strong>, 编译器条件码(标志位)设置指令各类转移指令来实现选择结构语句</p>
+<ol>
+<li>
+<p><strong>条件码（标志位）</strong></p>
+<p>条件码是CPU维护的状态寄存器，他们描述算术逻辑操作的<strong>属性</strong>，可以检测这些寄存器来执行分支指令：</p>
+<p><strong>CF</strong> 进(借)位标志，适用于最近的无符号整数加减运算，有进(借)位 CF = 1</p>
+<p><strong>ZF</strong> 零标志，标志最近操作结果是否为0</p>
+<p><strong>SF</strong> 符号标志，标志最近的带符号数运算结果，负 :SF = 1</p>
+<p><strong>OF</strong> 溢出标志，标志最近带符号数运算结果是否溢出</p>
+<p>由于OF，SF对无符号数无意义， CF对带符号数无意义，常见的算术逻辑运算指令都会设置条件码</p>
+</li>
+<li>
+<p><strong>IF 语句</strong></p>
+<p>通用形式如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">test_expr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">then_statement</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="n">else_statement</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>翻译为 goto 语句形式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">goto</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">then_statement</span>
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="n">done</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">false</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">else_statement</span>
+</span></span><span class="line"><span class="cl"><span class="nl">done</span><span class="p">:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对于下面的 c 语言函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">get_count</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p1</span> <span class="o">&gt;</span> <span class="n">p2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="n">p2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="n">p1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将得到以下汇编码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nf">movl</span>     <span class="mi">8</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">movl</span>     <span class="mi">12</span><span class="p">(</span><span class="o">%</span><span class="nb">ebp</span><span class="p">),</span> <span class="o">%</span><span class="nb">edx</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cmpl</span>     <span class="o">%</span><span class="nb">edx</span> <span class="o">%</span><span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jbe</span>      <span class="nv">.L1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">movl</span>     <span class="p">(</span><span class="o">%</span><span class="nb">edx</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">jmp</span>      <span class="nv">.L2</span>
+</span></span><span class="line"><span class="cl"><span class="nl">.L1:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">movl</span>     <span class="p">(</span><span class="o">%</span><span class="nb">eax</span><span class="p">),</span> <span class="o">%</span><span class="nb">eax</span>
+</span></span><span class="line"><span class="cl"><span class="nl">.L2:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>SWITCH 语句</strong></p>
+<p>对于 <strong>小范围</strong> 和 <strong>小量</strong> 的选择语句，使用 <strong>跳转表</strong>，对于<strong>大范围</strong>或者<strong>大量</strong>的选择语句编译器还是会和 <strong>if-then-else</strong> 一样的方式来处理</p>
+<p>跳转表即：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nasm" data-lang="nasm"><span class="line"><span class="cl"><span class="nl">.L12:</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L3</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L4</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L5</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L6</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L7</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">.long</span>    <span class="nv">.L8</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>这样就可以通过 相对于 .L12 的<strong>偏移量</strong>来<strong>计算真实的跳转目的地了</strong>，这样的跳转只需一个指令来找到跳转目的，而不是多层的 if-else 嵌套，有点字典内味了。这也解释了为什么switch-case语句需要break来退出case，因为所有的case在<strong>地址上是连续</strong>的。</p>
+<h3 id="循环语句机器表示">循环语句机器表示</h3>
+<p>常规的循环语句 有<strong>while</strong>,<strong>for</strong>, <strong>do-while</strong> 大多数编译器都将上述三种形式的循环语句转化为<strong>do-while</strong> 语句</p>
+<p><strong>DO-WHILE 循环</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">text_expr</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>goto 语句形式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">loop</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">goto</span> <span class="n">loop</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>WHILE循环</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">test_expr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在第一次执行循环体之前先执行一次</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">goto</span> <span class="n">done</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">while</span><span class="p">(</span><span class="n">text_expr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nl">done</span><span class="p">:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">goto</span> <span class="n">done</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nl">loop</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">goto</span> <span class="n">loop</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nl">done</span><span class="p">:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>FOR 循环</strong></p>
+<p>一般形式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="n">init_expr</span><span class="p">;</span> <span class="n">test_expr</span><span class="p">;</span> <span class="n">update_expr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>转化为 while 循环</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">init_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">test_expr</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="n">update_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>转化为 goto 语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">init_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">goto</span> <span class="n">done</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nl">loop</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">body_statement</span>
+</span></span><span class="line"><span class="cl">    <span class="n">update_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">test_expr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">goto</span> <span class="n">loop</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nl">done</span><span class="p">:</span>   
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">nsum_for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">====</span> <span class="err">编译</span> <span class="o">====&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">movl</span>        <span class="mi">8</span><span class="p">(</span><span class="o">%</span><span class="n">ebp</span><span class="p">),</span> <span class="o">%</span><span class="n">ecx</span>
+</span></span><span class="line"><span class="cl"><span class="n">movl</span>        <span class="err">$</span><span class="mi">0</span><span class="p">,</span> <span class="o">%</span><span class="n">eax</span>
+</span></span><span class="line"><span class="cl"><span class="n">movl</span>        <span class="err">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">%</span><span class="n">edx</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmp</span>         <span class="o">%</span><span class="n">edx</span><span class="p">,</span> <span class="o">%</span><span class="n">ecx</span>
+</span></span><span class="line"><span class="cl"><span class="n">jg</span>          <span class="p">.</span><span class="n">L2</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nl">L1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">addl</span>        <span class="o">%</span><span class="n">edx</span><span class="p">,</span> <span class="o">%</span><span class="n">eax</span>
+</span></span><span class="line"><span class="cl"><span class="n">addl</span>        <span class="err">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">%</span><span class="n">edx</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmpl</span>        <span class="o">%</span><span class="n">ecx</span><span class="p">,</span> <span class="o">%</span><span class="n">edx</span>
+</span></span><span class="line"><span class="cl"><span class="n">jle</span>         <span class="p">.</span><span class="n">L1</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nl">L2</span><span class="p">:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>直接按照模板即可</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-01-03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ji-suan-ji-zhi-ling-xi-tong/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" data-title="计算机指令系统"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" data-title="计算机指令系统"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" data-title="计算机指令系统"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://blog.xuaii.cc/ji-suan-ji-zhi-ling-xi-tong/" data-title="计算机指令系统" data-ralateuid="5661205446"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/idea-xr-you-xi-ling-gan/" class="prev" rel="prev" title="XR 游戏灵感"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>XR 游戏灵感</a>
+            <a href="/ji-suan-ji-zu-cheng-yuan-li-zhong-yang-chu-li-qi/" class="next" rel="next" title="计算机组成原理 中央处理器">计算机组成原理 中央处理器<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.109.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="blog.xuii.cc" target="_blank">xuaii</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

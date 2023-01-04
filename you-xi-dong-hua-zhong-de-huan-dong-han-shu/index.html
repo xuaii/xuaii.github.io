@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>游戏动画中的缓动函数 - xuii&#39;s blog wind</title><meta name="Description" content=""><meta property="og:title" content="游戏动画中的缓动函数" />
+<meta property="og:description" content="情景引入 考虑以下情形，采集用户水平输入 float HorizontalInput 来控制 player 的水平位移 1 2 3 4 void Update(float delta) { velocity.x = HorizontalInput * WalkSpeed * delta; } 这样写有两个缺点： 当影响水平速度的因素不只是水平" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" /><meta property="og:image" content="http://blog.xuaii.cc/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-03T18:35:43+08:00" />
+<meta property="article:modified_time" content="2023-01-03T18:35:43+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://blog.xuaii.cc/logo.png"/>
+
+<meta name="twitter:title" content="游戏动画中的缓动函数"/>
+<meta name="twitter:description" content="情景引入 考虑以下情形，采集用户水平输入 float HorizontalInput 来控制 player 的水平位移 1 2 3 4 void Update(float delta) { velocity.x = HorizontalInput * WalkSpeed * delta; } 这样写有两个缺点： 当影响水平速度的因素不只是水平"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" /><link rel="prev" href="http://blog.xuaii.cc/xian-xing-mo-xing/" /><link rel="next" href="http://blog.xuaii.cc/you-xi-ji-zhi-chuang-ti-hu-dong/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "游戏动画中的缓动函数",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/blog.xuaii.cc\/you-xi-dong-hua-zhong-de-huan-dong-han-shu\/"
+        },"genre": "posts","wordcount":  1720 ,
+        "url": "http:\/\/blog.xuaii.cc\/you-xi-dong-hua-zhong-de-huan-dong-han-shu\/","datePublished": "2023-01-03T18:35:43+08:00","dateModified": "2023-01-03T18:35:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xuaii"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="xuii&#39;s blog wind">Wind Island</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/record/"> 记录 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="xuii&#39;s blog wind">Wind Island</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/record/" title="">记录</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">游戏动画中的缓动函数</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="blog.xuii.cc" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xuaii</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-03">2023-01-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1720 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#情景引入">情景引入</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+    <li><a href="#二阶微分方程数值解">二阶微分方程数值解</a>
+      <ul>
+        <li><a href="#1-半隐式欧拉法">1. 半隐式欧拉法</a></li>
+        <li><a href="#2零极点匹配法高精度没懂">2.零极点匹配法（高精度）没懂</a></li>
+        <li><a href="#3-其他数值解方法略">3. 其他数值解方法（略）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="情景引入">情景引入</h2>
+<p>考虑以下情形，采集用户水平输入 <code>float HorizontalInput</code> 来控制 player 的水平位移</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">delta</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">velocity</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">HorizontalInput</span> <span class="p">*</span> <span class="n">WalkSpeed</span> <span class="p">*</span> <span class="n">delta</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样写有两个缺点：</p>
+<ol>
+<li>当影响水平速度的因素不只是水平输入时，不同因素的叠加不方便。不应该是 <code>=</code> 而应该是 <code>+=</code>;</li>
+<li>移动完全与输入一直，看起来很僵硬；</li>
+</ol>
+<h2 id="解决方案">解决方案</h2>
+<p>所以需要有这么一个函数(缓动函数)，它对输入的响应由可控的延迟，但最终会与输入保持一致
+// 添加示例函数1.1</p>
+<p>为了使缓动曲线更好的模拟现实世界中由于力产生加速度的运动，这里使用一个二阶系统来描述：
+$$
+y + k_1\cdot y^{&rsquo;} + k_2\cdot y^{&rsquo;&rsquo;} = x + k_3 \cdot x^{&rsquo;}
+$$</p>
+<p>等价的写法：
+$$
+y + k_1\cdot \frac{\mathrm{d} y}{\mathrm{d} t} + k_2\cdot \frac{\mathrm{d} ^2 y}{\mathrm{d}^2 t} = x + k_3 \cdot \frac{\mathrm{d} x}{\mathrm{d} t}
+$$</p>
+<p>通过调整 $k_1, k_2,k_3$ 可以改变图像的形状，
+// 插入示例图像1.2
+现在添加三个变量：
+$$
+f = \frac{1}{2\pi \sqrt{k_2}}, \quad
+\theta = \frac{k_1}{2\sqrt{k_2}}, \quad
+r = \frac{2k_3}{k_1}
+$$
+解方程组可得：
+$$
+k_1 = \frac{\theta}{\pi f}, \quad k_2 = \frac{1}{(2\pi f)^2}, \quad k_3 = \frac{r \theta}{2\pi f}
+$$</p>
+<p>原二阶系统的微分方程变为：
+$$
+y +\frac{\theta}{\pi f} \cdot y^{&rsquo;} + \frac{1}{(2\pi f)^2} \cdot y^{&rsquo;&rsquo;} = x + \frac{r \theta}{2\pi f} \cdot x^{&rsquo;}
+$$
+这里 $f, \theta, r$ 都具有现实意义了</p>
+<ul>
+<li>$f$ 以 $hz$ 为单位，代表系统<strong>固有频率</strong>，它描述系统对输入变化的响应速度</li>
+<li>$\theta$ 代表系统的<strong>阻尼系数</strong>，描述了系统如何最终趋于稳定</li>
+<li>$r$ 控制系统的<strong>初始响应</strong>
+当 $r = 0$ 时系统需要花费一点时间才能从禁止开始加速
+当 $r &gt; 0$ 时系统立刻对变化做出反应
+当 $r &gt; 1$ 时系统变化将冲过目标
+当 $r &lt; 0$ 时系统会有抬手运动（先反向运动）
+一般为机械链接设置 $r = 2$</li>
+</ul>
+<p>现在只剩下最后一个问题了，如何解二阶系统？</p>
+<h2 id="二阶微分方程数值解">二阶微分方程数值解</h2>
+<h3 id="1-半隐式欧拉法">1. 半隐式欧拉法</h3>
+<p>该方法在该问题下与复杂的 <strong>Verlet 积分法</strong> 有着相同的精度，
+首先计算 x 变化率
+$$
+x^{&rsquo;}<em>{n+1} = \frac{x</em>{n+1} - x_n}{T} \
+$$
+然后计算 y 的变化
+$$
+\begin{cases}
+y_{n + 1} = y_{n} + Ty^{&rsquo;}<em>{n} \
+\quad\
+y^{&rsquo;}</em>{n+1} = y^{&rsquo;}<em>{n} + Ty^{&rsquo;&rsquo;} \
+\end{cases}
+$$
+由于:
+$$
+y^{&rsquo;&rsquo;} = \frac{x + k_3 x^{&rsquo;} - y - k_1y^{&rsquo;}}{k_2}
+$$
+所以：
+$$
+y^{&rsquo;}</em>{n+1} = y^{&rsquo;}<em>{n} + T\cdot  \frac{x</em>{n+1} + k_3 x^{&rsquo;}<em>{n+1} - y</em>{n+1} - k_1y^{&rsquo;}_{n}}{k_2}
+$$</p>
+<p>这存在一个问题，如果频率 $f$ 远大于帧率，系统将变得不稳定，会产生无穷大的值：</p>
+<ol>
+<li>可以简单地设置 f 的取值范围</li>
+<li>通过数学方法确保不发生极端情况</li>
+</ol>
+<p>为了提供更多的鲁棒性，采用方案二
+<strong>分析</strong>
+不稳定产生的原因，该系统的本质是<strong>反馈系统</strong>，他的迭代输出将被反馈到后续的迭代用于计算，当<strong>帧间时间步长</strong>和<strong>参数</strong>相比太大时，随着时间增加，误差将逐渐累积，当超过某个<strong>临界值</strong>时，误差会开始滚雪球，迅速导致灾难性后果，为了计算该临界值，引入线性代数方法：
+$$
+\begin{cases}
+y_{n + 1} = y_{n} + Ty^{&rsquo;}<em>{n} \
+\quad \
+y^{&rsquo;}</em>{n+1} = y^{&rsquo;}<em>{n} + T\cdot  \frac{x</em>{n+1} + k_3 x^{&rsquo;}<em>{n+1} -(y</em>{n} + Ty^{&rsquo;}<em>{n}) - k_1y^{&rsquo;}</em>{n}}{k_2}
+\end{cases}
+$$
+展开合并同类项：</p>
+<p>$$
+\begin{cases}
+y_{n + 1} = y_{n} + Ty^{&rsquo;}<em>{n} \
+\quad \
+y^{&rsquo;}</em>{n+1} = \frac{-T}{k_2} y_n + \frac{k_2 - T^2 - Tk_1}{k_2}y^{&rsquo;}<em>{n} + \frac{T}{k_2}x</em>{n+1} + \frac{Tk_3}{k_2}x^{&rsquo;}_{n+1}\
+\end{cases}
+$$</p>
+<p>矩阵表示如下：
+$$
+\begin{bmatrix}
+y\
+y^{&rsquo;}
+\end{bmatrix}_{n+1}</p>
+<p>=</p>
+<p>\begin{bmatrix}
+1 &amp; T\
+-\frac{T}{k_2} &amp; \frac{k_2 - T^2 - Tk_1}{k_2}
+\end{bmatrix}</p>
+<p>\cdot</p>
+<p>\begin{bmatrix}
+y\
+y^{&rsquo;}
+\end{bmatrix}_{n}</p>
+<ul>
+<li></li>
+</ul>
+<p>\begin{bmatrix}
+0 &amp; 0\
+\frac{T}{k_2} &amp; \frac{Tk_3}{k_2}
+\end{bmatrix}</p>
+<p>\cdot</p>
+<p>\begin{bmatrix}
+x\
+x^{&rsquo;}
+\end{bmatrix}<em>{n+1}
+$$
+简写如下
+$$
+Y</em>{n+1} = A\cdot Y_n + B\cdot X_{n+1}
+$$
+分析：
+$A$ 称为状态转移矩阵，他表示迭代是如何影响状态变量的，直观来说如果 $A$ 矩阵不导致状态变量 $Y$ 的增长，那该反馈是稳定的；考虑$A$ 作为值而非变量，利用特征值理论，记 $A$ 的特征值$\lambda$
+如果 $\lambda_i &lt; 1$, Y 将逐渐减小趋于稳定
+如果 $\lambda_i &gt; 1$, Y 迅速增大，很快变得无法控制</p>
+<p>计算特征值如下：
+$$
+det(A - \lambda I) = 0
+$$
+展开后
+$$
+k_2 \lambda^2 + (T^2 + Tk_1 - 2k_2)\lambda (k_2-Tk_1) = 0
+$$
+解关于 $\lambda$ 的二次方程
+$$
+\lambda = \frac{ -b \pm \sqrt{b^2-4ac}}{2a}
+$$</p>
+<p>令 $|\lambda| &lt; 1$:
+得:
+$$
+T &lt; \sqrt{4k_2 + k_1^2} - k_1
+$$
+这里 如果时间步长大于临界值, 将拆分为多个了迭代来计算</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">public</span> <span class="n">classs</span> <span class="n">SecondOrderDynamics</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="kt">float</span> <span class="n">T_crit</span><span class="p">;</span> <span class="c1">// critical stable time step</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">SecondOrderDynamics</span><span class="p">(</span><span class="kt">float</span> <span class="n">f</span><span class="p">,</span> <span class="n">floatz</span><span class="p">,</span> <span class="kt">float</span> <span class="n">r</span><span class="p">,</span> <span class="n">Vector</span> <span class="n">x0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// update compute constants</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k1</span> <span class="p">=</span> <span class="n">z</span> <span class="p">/</span> <span class="p">(</span><span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k2</span> <span class="p">=</span> <span class="m">1</span> <span class="p">/</span> <span class="p">((</span><span class="m">2</span> <span class="p">*</span> <span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">)</span> <span class="p">*</span> <span class="p">(</span><span class="m">2</span> <span class="p">*</span> <span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k3</span> <span class="p">=</span> <span class="n">r</span> <span class="p">*</span> <span class="n">z</span> <span class="p">/</span> <span class="p">(</span><span class="m">2</span> <span class="p">*</span> <span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">T_crit</span> <span class="p">=</span> <span class="m">0.8f</span> <span class="p">*</span> <span class="p">(</span><span class="n">sqtr</span><span class="p">(</span><span class="m">4</span> <span class="p">*</span> <span class="n">k2</span> <span class="p">+</span> <span class="n">k1</span> <span class="p">*</span> <span class="n">k1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">xp</span> <span class="p">=</span> <span class="n">x0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="p">=</span> <span class="n">x0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">Vector</span> <span class="n">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">delta</span><span class="p">,</span> <span class="n">Vector</span> <span class="n">x</span><span class="p">,</span> <span class="n">Vector</span> <span class="n">xd</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">xd</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">xd</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">-</span> <span class="n">xp</span><span class="p">)</span> <span class="p">/</span> <span class="n">delta</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">xp</span> <span class="p">=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">interations</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Ceil</span><span class="p">(</span><span class="n">delta</span> <span class="p">/</span> <span class="n">T_crit</span><span class="p">);</span> <span class="c1">// take extra iterations if delta &gt; T_crit</span>
+</span></span><span class="line"><span class="cl">        <span class="n">delta</span> <span class="p">=</span> <span class="n">delta</span> <span class="p">/</span> <span class="n">iterations</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">iterations</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">y</span> <span class="p">=</span> <span class="n">y</span> <span class="p">+</span> <span class="n">delta</span> <span class="p">*</span> <span class="n">yd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">yd</span> <span class="p">=</span> <span class="n">yd</span> <span class="p">+</span> <span class="n">delta</span> <span class="p">*</span> <span class="p">(</span><span class="n">x</span> <span class="p">+</span> <span class="n">k3</span> <span class="p">*</span> <span class="n">xd</span> <span class="p">-</span> <span class="n">y</span> <span class="p">-</span> <span class="n">k1</span><span class="p">*</span><span class="n">yd</span><span class="p">)</span> <span class="p">/</span> <span class="n">k2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此外，如果想避免迭代次数过多，可以限制 $k_2$ 的值（减缓运动）
+$$
+k_2 &gt; \frac{T^2}{4} + \frac{Tk_1}{2}
+$$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">k2_stable</span> <span class="p">=</span> <span class="n">Max</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="m">1.1f</span> <span class="p">*</span> <span class="p">(</span><span class="n">T</span><span class="p">*</span><span class="n">T</span><span class="p">/</span><span class="m">4</span> <span class="p">+</span> <span class="n">T</span><span class="p">*</span><span class="n">k1</span><span class="p">/</span><span class="m">2</span><span class="p">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2零极点匹配法高精度没懂">2.零极点匹配法（高精度）没懂</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">public</span> <span class="n">classs</span> <span class="n">SecondOrderDynamics</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="n">Vector</span> <span class="n">xp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="n">Vector</span> <span class="n">y</span><span class="p">,</span> <span class="n">yd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="kt">float</span> <span class="n">_w</span><span class="p">,</span> <span class="n">_z</span><span class="p">,</span> <span class="n">_d</span><span class="p">,</span> <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span><span class="p">,</span> <span class="n">k3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">SecondOrderDynamics</span><span class="p">(</span><span class="kt">float</span> <span class="n">f</span><span class="p">,</span> <span class="kt">float</span> <span class="n">z</span><span class="p">,</span> <span class="kt">float</span> <span class="n">r</span><span class="p">,</span> <span class="n">Vetor</span> <span class="n">x0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_w</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_z</span> <span class="p">=</span> <span class="n">z</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_d</span> <span class="p">=</span> <span class="n">_w</span> <span class="p">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">Abs</span><span class="p">(</span><span class="n">z</span><span class="p">*</span><span class="m">2</span><span class="p">-</span><span class="m">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k1</span> <span class="p">=</span> <span class="n">z</span> <span class="p">/</span> <span class="p">(</span><span class="n">PI</span> <span class="p">*</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k2</span> <span class="p">=</span> <span class="m">1</span> <span class="p">/</span> <span class="p">(</span><span class="n">_w</span> <span class="p">*</span> <span class="n">_w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k3</span> <span class="p">=</span> <span class="n">r</span> <span class="p">*</span> <span class="n">z</span> <span class="p">/</span> <span class="n">_w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">xp</span> <span class="p">=</span> <span class="n">x0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="p">=</span> <span class="n">x0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">Vector</span> <span class="n">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">delta</span><span class="p">,</span> <span class="n">Vector</span> <span class="n">x</span><span class="p">,</span> <span class="n">Vector</span> <span class="n">xd</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">xd</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">float</span> <span class="n">k1_stable</span><span class="p">,</span> <span class="n">k2_stable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">_w</span> <span class="p">*</span> <span class="n">T</span> <span class="p">&lt;</span> <span class="n">_z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">k1_stable</span> <span class="p">=</span> <span class="n">k1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">k2_stable</span> <span class="p">=</span> <span class="n">Max</span><span class="p">(</span><span class="n">k2</span><span class="p">,</span> <span class="n">T</span> <span class="p">*</span> <span class="n">T</span> <span class="p">/</span> <span class="m">2</span><span class="p">+</span> <span class="n">T</span> <span class="p">*</span> <span class="n">k1</span> <span class="p">/</span> <span class="m">2</span><span class="p">,</span> <span class="n">T</span><span class="p">*</span><span class="n">k1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">float</span> <span class="n">t1</span> <span class="p">=</span> <span class="n">Exp</span><span class="p">(-</span><span class="n">_z</span> <span class="p">*</span> <span class="n">_w</span> <span class="p">*</span> <span class="n">T</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">float</span> <span class="n">alpha</span> <span class="p">=</span> <span class="m">2</span> <span class="p">*</span> <span class="n">t1</span> <span class="p">*</span> <span class="p">(</span><span class="n">_z</span> <span class="p">&lt;=</span> <span class="m">1</span> <span class="p">?</span> <span class="n">cos</span><span class="p">(</span><span class="n">T</span> <span class="p">*</span> <span class="n">_d</span><span class="p">)</span> <span class="p">:</span> <span class="n">cosh</span><span class="p">(</span><span class="n">T</span> <span class="p">*</span> <span class="n">_d</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">float</span> <span class="n">beta</span> <span class="p">=</span> <span class="n">t1</span> <span class="p">*</span> <span class="n">t1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">float</span> <span class="n">t2</span> <span class="p">=</span> <span class="n">T</span> <span class="p">/</span> <span class="p">(</span><span class="m">1</span> <span class="p">+</span> <span class="n">beta</span> <span class="p">-</span><span class="n">alpha</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">k1_stable</span> <span class="p">=</span> <span class="p">(</span><span class="m">1</span> <span class="p">-</span> <span class="n">beta</span><span class="p">)</span> <span class="p">*</span> <span class="n">t2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">k2_stable</span> <span class="p">=</span> <span class="n">T</span> <span class="p">*</span> <span class="n">t2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">y</span> <span class="p">=</span> <span class="n">y</span> <span class="p">+</span> <span class="n">T</span> <span class="p">*</span> <span class="n">yd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">yd</span> <span class="p">=</span> <span class="n">yd</span> <span class="p">+</span> <span class="n">T</span> <span class="p">*</span> <span class="p">(</span><span class="n">x</span> <span class="p">+</span> <span class="n">k3</span><span class="p">*</span><span class="n">xd</span> <span class="p">-</span><span class="n">y</span> <span class="p">-</span> <span class="n">k1</span><span class="p">*</span><span class="n">yd</span><span class="p">)</span> <span class="p">/</span> <span class="n">k2_stable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-其他数值解方法略">3. 其他数值解方法（略）</h3>
+<p>参考:
+t3ssel8r:<a href="https://www.youtube.com/watch?v=KPoeNZZ6H4s" target="_blank" rel="noopener noreffer ">Giving Personality to Procedural Animations using Math</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-01-03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/you-xi-dong-hua-zhong-de-huan-dong-han-shu/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" data-title="游戏动画中的缓动函数"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" data-title="游戏动画中的缓动函数"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" data-title="游戏动画中的缓动函数"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/" data-title="游戏动画中的缓动函数" data-ralateuid="5661205446"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/xian-xing-mo-xing/" class="prev" rel="prev" title="线性模型"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>线性模型</a>
+            <a href="/you-xi-ji-zhi-chuang-ti-hu-dong/" class="next" rel="next" title="[游戏机制] 窗体互动">[游戏机制] 窗体互动<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.109.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="blog.xuii.cc" target="_blank">xuaii</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
