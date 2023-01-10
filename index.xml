@@ -4,9 +4,17 @@
         <link>http://blog.xuaii.cc/</link>
         <description>xuii&#39;s blog wind</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>herrn.xu@outlook.com (xuaii)</managingEditor>
-            <webMaster>herrn.xu@outlook.com (xuaii)</webMaster><lastBuildDate>Tue, 03 Jan 2023 18:42:51 &#43;0800</lastBuildDate>
+            <webMaster>herrn.xu@outlook.com (xuaii)</webMaster><lastBuildDate>Wed, 11 Jan 2023 02:03:51 &#43;0800</lastBuildDate>
             <atom:link href="http://blog.xuaii.cc/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[游戏IDEA] 开源 2D多人在线平台跳跃游戏</title>
+    <link>http://blog.xuaii.cc/game-idea-mmoplat/</link>
+    <pubDate>Wed, 11 Jan 2023 02:03:51 &#43;0800</pubDate>
+    <author>xuaii</author>
+    <guid>http://blog.xuaii.cc/game-idea-mmoplat/</guid>
+    <description><![CDATA[为什么想到这样一个游戏？ 前两年入坑了 《最终幻想14》，感受到现今 MMORPG 最大的缺点就是更新慢慢慢慢！通常两个版本之间有3个月的长草期，在这段时间玩]]></description>
+</item>
+<item>
     <title>[挖坑] 将高级语言编译为红石电路</title>
     <link>http://blog.xuaii.cc/wa-keng-jiang-gao-ji-cheng-xu-yu-yan-bian-yi-cheng-hong-shi-dian-lu/</link>
     <pubDate>Tue, 03 Jan 2023 18:42:51 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>xuaii</author>
     <guid>http://blog.xuaii.cc/you-xi-ji-zhi-chuang-ti-hu-dong/</guid>
     <description><![CDATA[使用 Godot 对WindowFrame 进行拙劣的模仿，观察视频中的窗体有以下性质： 窗体既是 UI 也是可以与玩家互动的 场景物体 窗口的位置可以由场景物理改变]]></description>
-</item>
-<item>
-    <title>游戏动画中的缓动函数</title>
-    <link>http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/</link>
-    <pubDate>Tue, 03 Jan 2023 18:35:43 &#43;0800</pubDate>
-    <author>xuaii</author>
-    <guid>http://blog.xuaii.cc/you-xi-dong-hua-zhong-de-huan-dong-han-shu/</guid>
-    <description><![CDATA[情景引入 考虑以下情形，采集用户水平输入 float HorizontalInput 来控制 player 的水平位移 1 2 3 4 void Update(float delta) { velocity.x = HorizontalInput * WalkSpeed * delta; } 这样写有两个缺点： 当影响水平速度的因素不只是水平]]></description>
 </item>
 </channel>
 </rss>
